@@ -1,0 +1,569 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_NYqgwN": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_nqGYkR": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Card_Case_84552de0-3384-40a3-ac57-2c693fdbc7f8.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Shop Now",
+            "link": "shopify://collections/coffee",
+            "button_style_secondary": false,
+            "box_align": "bottom-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-2",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_GBqRAt": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Mascow.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Shop Now",
+            "link": "shopify://collections/men-card-holder",
+            "button_style_secondary": false,
+            "box_align": "bottom-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_nqGYkR",
+        "slide_GBqRAt"
+      ],
+      "custom_css": [
+        ".banner__box {background-color: transparent;}",
+        ".banner__buttons {border-radius: 20px;}",
+        ".button {}",
+        ".dotsAbsolute {z-index: 10; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; justify-content: center; align-items: center;}"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 3,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_CjbypF": {
+      "type": "rich-text",
+      "blocks": {
+        "text_FkhXL6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>ABOUT US</p>"
+          }
+        },
+        "heading_ndBze8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Luxury, Legacy, Leather",
+            "heading_size": "h0"
+          }
+        },
+        "button_axyQrn": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "text_UpzJWY": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>With a legacy dating back to 1880, Jafferjees is one of the oldest leather goods brand in the world.</h3>"
+          }
+        }
+      },
+      "block_order": [
+        "text_FkhXL6",
+        "heading_ndBze8",
+        "button_axyQrn",
+        "text_UpzJWY"
+      ],
+      "custom_css": [
+        "p {color: black; font-size: 17px;}",
+        "h2 {margin-top: px; font-size: 58px; font-weight: 500;}",
+        "h3 {margin-top: -8px; color: black;}",
+        ".rich-text__blocks {padding-left: 0; width: 100vw; padding-right: 0;}",
+        "p {white-space: nowrap;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "custom_collage_JrKgdM": {
+      "type": "custom-collage",
+      "disabled": true,
+      "settings": {
+        "heading": "Signature Collection",
+        "description": "Our Signature Collections blend elegance with functionality, ensuring every product stands as a testament to timeless sophistication.",
+        "btn_link": "",
+        "btn_text": "Shop Now",
+        "btn_color": "#1773b0",
+        "image1_link": "",
+        "image1_alt": "Jafferjees Store",
+        "image1_width": "500",
+        "image1_height": "500",
+        "image2_link": "",
+        "image2_alt": "Jafferjees Store",
+        "image2_width": "500",
+        "image2_height": "500",
+        "main_image_link": "",
+        "main_image_alt": "Jafferjees Store",
+        "main_image_width": "1000",
+        "main_image_height": "1000"
+      }
+    },
+    "collage_cdnE3P": {
+      "type": "collage",
+      "blocks": {
+        "image_4dDB7k": {
+          "type": "image",
+          "settings": {}
+        },
+        "product_AGzNjr": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
+        },
+        "collection_JkjjVL": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_4dDB7k",
+        "product_AGzNjr",
+        "collection_JkjjVL"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collage_J6FfcA": {
+      "type": "collage",
+      "blocks": {
+        "image_TUTLTj": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_jytjEe": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_TUTLTj",
+        "image_jytjEe"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "none",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_Hhb4p7": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_igrByy": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "men"
+          }
+        },
+        "featured_collection_q3Vdkc": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "women"
+          }
+        },
+        "featured_collection_tEFYMg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bags"
+          }
+        },
+        "featured_collection_CnXCHP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "accessories"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_igrByy",
+        "featured_collection_q3Vdkc",
+        "featured_collection_tEFYMg",
+        "featured_collection_CnXCHP"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".card__inner {background: transparent; height: 150px; width: 150px;}",
+        "img {height: 150px; width: 150px;}",
+        ".card--standard {align-items: center;}",
+        "h3 {text-transform: uppercase;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "color_scheme": "accent-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_7zai4y": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HjDTHP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Signature Collection",
+            "heading_size": "h0"
+          }
+        },
+        "text_8xkk7Q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Signature Collections blend elegance with functionality, ensuring every product stands as a testament to timeless sophistication. From luxurious leather goods to meticulously crafted accessories, each piece embodies the essence of refined craftsmanship.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_6FUKBf": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "shopify://collections",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HjDTHP",
+        "text_8xkk7Q",
+        "button_6FUKBf"
+      ],
+      "custom_css": [
+        "h2 {}",
+        "p {font-size: 20px; line-height: 23px;}",
+        "a {text-transform: uppercase; font-weight: 600; font-size: 17px; background-color: #1874b4;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Duffel_bag.png",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "background-1",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_qCTqKY": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_yUzkUd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dinner & Dance",
+            "heading_size": "h0"
+          }
+        },
+        "text_ftmr4D": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From sleek clutches to stylish shoulder bags, our Dinner & Dance range offers sophisticated accessories to elevate your evening ensemble. Discover the full collection today and find the perfect finishing touch to complete your look.</p><p></p>",
+            "text_style": "body"
+          }
+        },
+        "button_aYKidA": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_yUzkUd",
+        "text_ftmr4D",
+        "button_aYKidA"
+      ],
+      "custom_css": [
+        "a {text-transform: uppercase; font-weight: 600; font-size: 17px; background-color: #1874b4;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Laptop_bag.png",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {text-align: center;}",
+        ".card-wrapper {height: 350px; width: 250px; align-items: center;}",
+        ".collection {justify-content: center;}",
+        ".product-grid {gap: ;}",
+        ".grid__item {display: flex; width: 350px; justify-content: center;}",
+        ".card__inner {height: 250px;}",
+        "img {height: 250px; width: 250px; object-fit: contain;}",
+        "h3 {text-transform: uppercase;}",
+        "a {color: black; font-size: 16px; text-decoration: none;}",
+        "a:hover {text-decoration: none;}"
+      ],
+      "settings": {
+        "title": "Trending Collection",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "men-jackets",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 32,
+        "padding_bottom": 12
+      }
+    },
+    "multicolumn_VwmNnj": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_t8xFR3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Gift_Wrap.webp",
+            "title": "",
+            "text": "<h3>Complimentary Gift Wrapping</h3>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8q4Nxk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/restoration.webp",
+            "title": "",
+            "text": "<h3>Restoration Services</h3>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3grdCc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2162429.webp",
+            "title": "",
+            "text": "<h3>Complimentary Engraving</h3>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_t8xFR3",
+        "column_8q4Nxk",
+        "column_3grdCc"
+      ],
+      "custom_css": [
+        ".multicolumn-card {justify-content: center;}",
+        ".multicolumn-card__image-wrapper {height: 70px;}",
+        ".media--transparent {display: flex; justify-content: center; align-items: center; height: 100%; width: 100%;}",
+        "img {max-width: 100%; max-height: 50%; object-fit: contain;}",
+        "ul {padding-top: 20px;}",
+        ".title-wrapper-with-link {justify-content: center;}",
+        ".title {font-size: 35px;}",
+        "h3 {font-size: 20px;}"
+      ],
+      "settings": {
+        "title": "What We Offer",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 64,
+        "padding_bottom": 48
+      }
+    },
+    "image_banner_rDfPdD": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_QDab9W": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE FURTHER YOU GO, THE BETTER IT GETS,",
+            "heading_size": "h1"
+          }
+        },
+        "text_BCQqAG": {
+          "type": "text",
+          "settings": {
+            "text": "Our leather luggage and jackets are hand-stitched by craftsmen from the U.S., Mexico and India who share our high standard of excellence. Features such as triple-sewn edges and reinforced stress points ensure that when you buy a Buffalo Jackson, you get quality that lasts lifetimes.",
+            "text_style": "body"
+          }
+        },
+        "buttons_XnDTTA": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP NOW",
+            "button_link_1": "shopify://collections",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_QDab9W",
+        "text_BCQqAG",
+        "buttons_XnDTTA"
+      ],
+      "settings": {
+        "image_overlay_opacity": 20,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "accent-1",
+        "image_behavior": "fixed",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "multicolumn_78PT3L": {
+      "type": "multicolumn",
+      "custom_css": [
+        ".title-wrapper-with-link {justify-content: center;}",
+        ".title {font-size: 35px;}",
+        ".multicolumn-card {display: flex; justify-content: center; align-items: center; background: transparent;}",
+        ".multicolumn-card__image-wrapper {display: flex; justify-content: center; align-items: center; height: 375px; width: 450px;}",
+        ".media--transparent {display: flex; justify-content: center; align-items: center; height: 100%; width: 100%;}",
+        "ul {gap: 0;}"
+      ],
+      "settings": {
+        "title": "Follow Us On Instagram!",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "slideshow_NYqgwN",
+    "rich_text_CjbypF",
+    "custom_collage_JrKgdM",
+    "collage_cdnE3P",
+    "collage_J6FfcA",
+    "collection_list_Hhb4p7",
+    "image_with_text_7zai4y",
+    "image_with_text_qCTqKY",
+    "featured_collection",
+    "multicolumn_VwmNnj",
+    "image_banner_rDfPdD",
+    "multicolumn_78PT3L"
+  ]
+}

@@ -1,0 +1,77 @@
+.customCollage {
+width: 100%;
+height: 100%;
+display: grid;
+gap: 15px;
+padding: 30px;
+grid-template-columns: repeat(12, 1fr);
+}
+.collageBlock {
+width: 100%;
+height: 100%;
+}
+.collageImageWrapper{
+width: 100%;
+height: 100%;
+}
+.collageImage {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.collageVideoWrapper{
+width: 100%;
+height: auto;
+padding-bottom: 60%;
+position: relative;
+}
+.collageVideo{
+width: 100%;
+height: 100%;
+position: absolute;
+}
+.collageTitle {
+font-size: clamp(15px, 4vw, 40px);
+}
+.textContent{
+width: 100%;
+height: 100%;
+overflow: hidden;
+font-size: clamp(10px, 2vw, 40px);
+}
+p {
+line-height: 1em;
+}
+@media screen and (min-width: 24.15em) {
+/* 21em "gate" * 1.15 font-size */
+p {
+line-height: calc(1.3em + (1.5 - 1.3) * ((100vw - 21em) / (35 - 21)));
+}
+}
+@media (min-width: 40.25em) {
+/* 35em "gate" * 1.15 font-size */
+p {
+line-height: 1.5em;
+}
+}
+/* @media only screen and (max-width: 1050px){
+.textContent{
+line-height: 1;
+}
+}
+*/
+@media only screen and (max-width: 300px){
+.customCollage {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.customBlock {
+display: flex;
+}
+.collageTitle {
+display: flex;
+justify-content: center;
+margin: 0 auto;
+}
+}

@@ -1,0 +1,192 @@
+<div id="shopify-section-template--17127758397635__index_custom_section_iY3Y3m" class="shopify-section">
+  <style>
+    /* Existing styles */
+  </style>
+
+  <div class="index-custom-container">
+    <div class="index-custom-wrapper m-section-my">
+      <div class="index-custom-content">
+        <div class="index-custom-content-wrapper">
+          <div class="index-custom-content-wrapper-line-top"></div>
+          <div class="index-custom-content-wrapper-line-bottom"></div>
+          <div class="index-custom-content-box">
+            <div class="index-custom-content-heading">
+              <h2>{{ section.settings.heading }}</h2>
+            </div>
+
+            <div class="index-custom-content-desc">
+              <p>{{ section.settings.description }}</p>
+            </div>
+
+            <div class="index-custom-content-btn">
+              <a
+                href="{{ section.settings.btn_link }}"
+                style="color: #ffffff; background-color: {{ section.settings.btn_color }}"
+              >
+                {{ section.settings.btn_text }}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="index-custom-content-media">
+          <div class="index-custom-content-media-box">
+            <a href="{{ section.settings.image1_link }}">
+              <img
+                src="{{ section.settings.image1 | image_url }}"
+                alt="{{ section.settings.image1_alt }}"
+                width="{{ section.settings.image1_width }}"
+                height="{{ section.settings.image1_height }}"
+              >
+            </a>
+          </div>
+          <div class="index-custom-content-media-box">
+            <a href="{{ section.settings.image2_link }}">
+              <img
+                src="{{ section.settings.image2 | image_url }}"
+                alt="{{ section.settings.image2_alt }}"
+                width="{{ section.settings.image2_width }}"
+                height="{{ section.settings.image2_height }}"
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="index-custom-media">
+        <a href="{{ section.settings.main_image_link }}">
+          <img
+            src="{{ section.settings.main_image | image_url }}"
+            alt="{{ section.settings.main_image_alt }}"
+            width="{{ section.settings.main_image_width }}"
+            height="{{ section.settings.main_image_height }}"
+          >
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Collection Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Signature Collection"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Our Signature Collections blend elegance with functionality, ensuring every product stands as a testament to timeless sophistication."
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "color",
+      "id": "btn_color",
+      "label": "Button Color",
+      "default": "#1773b0"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "First Image"
+    },
+    {
+      "type": "url",
+      "id": "image1_link",
+      "label": "First Image Link"
+    },
+    {
+      "type": "text",
+      "id": "image1_alt",
+      "label": "First Image Alt Text",
+      "default": "Jafferjees Store"
+    },
+    {
+      "type": "text",
+      "id": "image1_width",
+      "label": "First Image Width",
+      "default": "500"
+    },
+    {
+      "type": "text",
+      "id": "image1_height",
+      "label": "First Image Height",
+      "default": "500"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Second Image"
+    },
+    {
+      "type": "url",
+      "id": "image2_link",
+      "label": "Second Image Link"
+    },
+    {
+      "type": "text",
+      "id": "image2_alt",
+      "label": "Second Image Alt Text",
+      "default": "Jafferjees Store"
+    },
+    {
+      "type": "text",
+      "id": "image2_width",
+      "label": "Second Image Width",
+      "default": "500"
+    },
+    {
+      "type": "text",
+      "id": "image2_height",
+      "label": "Second Image Height",
+      "default": "500"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    },
+    {
+      "type": "url",
+      "id": "main_image_link",
+      "label": "Main Image Link"
+    },
+    {
+      "type": "text",
+      "id": "main_image_alt",
+      "label": "Main Image Alt Text",
+      "default": "Jafferjees Store"
+    },
+    {
+      "type": "text",
+      "id": "main_image_width",
+      "label": "Main Image Width",
+      "default": "1000"
+    },
+    {
+      "type": "text",
+      "id": "main_image_height",
+      "label": "Main Image Height",
+      "default": "1000"
+    }
+  ],
+  "presets": [{
+    "name": "Custom Collection"
+  }]
+}
+{% endschema %}
