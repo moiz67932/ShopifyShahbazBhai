@@ -1,37 +1,40 @@
 <div>
   <h1>{{ section.settings.collectionName }}</h1>
   {% for block in section.blocks %}
-  <p>{{ block.settings.collection }}</p>
-    <img src="{{ block.settings.collection_list | asset_url}}" height=10 width=10>
-    {% endfor %}
+    {% assign collection = block.settings.collection %}
+    {% if collection %}
+      <p>{{ collection.title }}</p>
+      {% if collection.image %}
+        <img src="{{ collection.image | img_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
+      {% else %}
+        <p>No image available for {{ collection.title }}</p>
+      {% endif %}
+    {% else %}
+      <p>No collection selected</p>
+    {% endif %}
+  {% endfor %}
 </div>
 
 {% schema %}
-  {    
+  {
     "name": "Custom Collection Grid 1",
     "settings": [
       {
         "type": "text",
-        "label":"Collection Name",
+        "label": "Collection Name",
         "id": "collectionName"
       }
     ],
     "blocks": [
       {
-        "name":"collection",
+        "name": "collection",
         "type": "collection",
         "settings": [
           {
             "type": "collection",
             "label": "Collection",
             "id": "collection"
-          },
-          {
-  "type": "collection_list",
-  "id": "collection_list",
-  "label": "Collections",
-  "limit": 8
-}
+          }
         ]
       }
     ],
