@@ -6,7 +6,7 @@
       {% for block in section.blocks %}
       <div class="collection-item {{ block.settings.collection_layout }}">
         <a href="{{ block.settings.collection | link_to: 'collections' }}" class="collection-link">
-          <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ block.settings.collection }}" height=10 width=10 ="collection-image" />
+          <img src="{{ block.settings.image | img_url }}" alt="{{ block.settings.collection }}" height=10 width=10 class="collection-image" />
           <div class="collection-content">
             <h3 class="collection-title">{{ block.settings.title }}</h3>
             <button class="shop-now-btn">Shop Now</button>
