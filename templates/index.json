@@ -130,13 +130,13 @@
         "collection_RTXydb": {
           "type": "collection",
           "settings": {
-            "collection": "men"
+            "collection": "men-bags"
           }
         },
         "collection_bxMMzE": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "men-jackets"
           }
         }
       },
