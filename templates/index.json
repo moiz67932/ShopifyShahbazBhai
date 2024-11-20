@@ -126,6 +126,24 @@
     },
     "custom_collection_grid1_moiz_bRJWEz": {
       "type": "CustomCollectionGrid1Moiz",
+      "blocks": {
+        "collection_RTXydb": {
+          "type": "collection",
+          "settings": {
+            "collection": "men"
+          }
+        },
+        "collection_bxMMzE": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_RTXydb",
+        "collection_bxMMzE"
+      ],
       "settings": {
         "collectionName": "Women"
       }
