@@ -133,6 +133,16 @@
             "collection": "men-bags"
           }
         },
+        "collection_nYmn9d": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_list": [
+              "men-bags",
+              "men-jackets"
+            ]
+          }
+        },
         "collection_bxMMzE": {
           "type": "collection",
           "settings": {
@@ -142,6 +152,7 @@
       },
       "block_order": [
         "collection_RTXydb",
+        "collection_nYmn9d",
         "collection_bxMMzE"
       ],
       "settings": {
