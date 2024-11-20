@@ -15,7 +15,6 @@
         "slide_nqGYkR": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Card_Case_84552de0-3384-40a3-ac57-2c693fdbc7f8.png",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -33,7 +32,6 @@
         "slide_GBqRAt": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Mascow.png",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -124,6 +122,12 @@
         "full_width": true,
         "padding_top": 52,
         "padding_bottom": 52
+      }
+    },
+    "custom_collection_grid1_moiz_bRJWEz": {
+      "type": "CustomCollectionGrid1Moiz",
+      "settings": {
+        "collectionName": "Women"
       }
     },
     "custom_collage_JrKgdM": {
@@ -306,7 +310,6 @@
         "a {text-transform: uppercase; font-weight: 600; font-size: 17px; background-color: #1874b4;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Duffel_bag.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -356,7 +359,6 @@
         "a {text-transform: uppercase; font-weight: 600; font-size: 17px; background-color: #1874b4;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Laptop_bag.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -417,7 +419,6 @@
         "column_t8xFR3": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Gift_Wrap.webp",
             "title": "",
             "text": "<h3>Complimentary Gift Wrapping</h3>",
             "link_label": "",
@@ -427,7 +428,6 @@
         "column_8q4Nxk": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/restoration.webp",
             "title": "",
             "text": "<h3>Restoration Services</h3>",
             "link_label": "",
@@ -437,7 +437,6 @@
         "column_3grdCc": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/2162429.webp",
             "title": "",
             "text": "<h3>Complimentary Engraving</h3>",
             "link_label": "",
@@ -555,6 +554,7 @@
   "order": [
     "slideshow_NYqgwN",
     "rich_text_CjbypF",
+    "custom_collection_grid1_moiz_bRJWEz",
     "custom_collage_JrKgdM",
     "collage_cdnE3P",
     "collage_J6FfcA",
