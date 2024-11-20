@@ -1,6 +1,8 @@
 <div>
   <h1>{{ section.settings.collectionName }}</h1>
-  <p>{{  }}</p>
+  {% for block in section.blocks %}
+  <p>{{ block.settings.collection }}</p>
+    {% endfor %}
 </div>
 
 {% schema %}
