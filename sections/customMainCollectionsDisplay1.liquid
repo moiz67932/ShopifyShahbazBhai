@@ -1,71 +1,65 @@
-liquid
+<section class="collections-section">
+  <div class="container">
+    <h2 class="heading">WOMEN</h2>
+    <p class="subheading">Abayas, Jilbabs, Jalabiyas, Kaftans, Hijab Scarfs & more</p>
+    <div class="collections-grid">
+      {% for block in section.blocks %}
+      <div class="collection-item {{ block.settings.collection_layout }}">
+        <a href="{{ block.settings.collection | link_to: 'collections' }}" class="collection-link">
+          <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ block.settings.collection }}" class="collection-image" />
+          <div class="collection-content">
+            <h3 class="collection-title">{{ block.settings.title }}</h3>
+            <button class="shop-now-btn">Shop Now</button>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 {% schema %}
 {
-  "name": "Women's Collections",
-  "settings": [
+  "name": "Collections Grid",
+  "settings": [],
+  "blocks": [
     {
-      "type": "text",
-      "id": "section_title",
-      "label": "Section Title",
-      "default": "WOMEN"
-    },
-    {
-      "type": "textarea",
-      "id": "section_description",
-      "label": "Section Description",
-      "default": "Abayas, Jilbabs, Jalabiyas, Kaftans, Hijab Scarfs & more"
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Collection Title"
+        },
+        {
+          "id": "collection",
+          "type": "collection",
+          "label": "Collection Link"
+        },
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Collection Image"
+        },
+        {
+          "id": "collection_layout",
+          "type": "select",
+          "label": "Layout Style",
+          "options": [
+            { "value": "large", "label": "Large (2 rows)" },
+            { "value": "small", "label": "Small (1 row)" },
+            { "value": "medium", "label": "Medium (2 rows slightly larger)" }
+          ]
+        }
+      ]
     }
   ],
   "presets": [
     {
-      "name": "Women's Collections",
-      "category": "Custom"
+      "name": "Collections Grid",
+      "category": "Custom Sections"
     }
   ]
 }
 {% endschema %}
-
-<div class="women-collections">
-  <h2>{{ section.settings.section_title }}</h2>
-  <p>{{ section.settings.section_description }}</p>
-  <div class="collection-items">
-    <div class="collection-item">
-      <img src="path_to_abaya_image.jpg" alt="Abaya for Women">
-      <a href="{{ collections['abayas'].url }}" class="btn btn-primary">Shop Now</a>
-    </div>
-    <div class="collection-item">
-      <img src="path_to_jilbab_image.jpg" alt="Jilbabs">
-      <a href="{{ collections['jilbabs'].url }}" class="btn btn-primary">Shop Now</a>
-    </div>
-    <div class="collection-item">
-      <img src="path_to_kaftan_image.jpg" alt="Kaftan">
-      <a href="{{ collections['kaftans'].url }}" class="btn btn-primary">Shop Now</a>
-    </div>
-    <div class="collection-item">
-      <img src="path_to_hijab_scarf_image.jpg" alt="Hijab Scarfs">
-      <a href="{{ collections['hijab-scarfs'].url }}" class="btn btn-primary">Shop Now</a>
-    </div>
-  </div>
-</div>
-
-<style>
-  .women-collections {
-    text-align: center;
-  }
-  .collection-items {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  .collection-item {
-    margin: 20px;
-  }
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-</style>
