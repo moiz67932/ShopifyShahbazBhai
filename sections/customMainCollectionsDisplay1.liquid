@@ -1,0 +1,71 @@
+liquid
+{% schema %}
+{
+  "name": "Women's Collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "WOMEN"
+    },
+    {
+      "type": "textarea",
+      "id": "section_description",
+      "label": "Section Description",
+      "default": "Abayas, Jilbabs, Jalabiyas, Kaftans, Hijab Scarfs & more"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Women's Collections",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="women-collections">
+  <h2>{{ section.settings.section_title }}</h2>
+  <p>{{ section.settings.section_description }}</p>
+  <div class="collection-items">
+    <div class="collection-item">
+      <img src="path_to_abaya_image.jpg" alt="Abaya for Women">
+      <a href="{{ collections['abayas'].url }}" class="btn btn-primary">Shop Now</a>
+    </div>
+    <div class="collection-item">
+      <img src="path_to_jilbab_image.jpg" alt="Jilbabs">
+      <a href="{{ collections['jilbabs'].url }}" class="btn btn-primary">Shop Now</a>
+    </div>
+    <div class="collection-item">
+      <img src="path_to_kaftan_image.jpg" alt="Kaftan">
+      <a href="{{ collections['kaftans'].url }}" class="btn btn-primary">Shop Now</a>
+    </div>
+    <div class="collection-item">
+      <img src="path_to_hijab_scarf_image.jpg" alt="Hijab Scarfs">
+      <a href="{{ collections['hijab-scarfs'].url }}" class="btn btn-primary">Shop Now</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .women-collections {
+    text-align: center;
+  }
+  .collection-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .collection-item {
+    margin: 20px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+</style>
