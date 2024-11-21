@@ -1,4 +1,6 @@
-<div>
+{% comment %}
+  
+ <div>
   <h1>{{ section.settings.collectionName }}</h1>
   {% for block in section.blocks %}
     {% assign collection = block.settings.collection %}
@@ -14,6 +16,38 @@
     {% endif %}
   {% endfor %}
 </div>
+{% endcomment %}
+
+<section class="container">
+        <h1>WOMEN</h1>
+        <p>Abayas, Jilbabs, Jalabiyas, Kaftans, Hijab Scarfs & more</p>
+
+        <div class="grid">
+            <!-- Abayas -->
+            <div class="item abaya">
+                 <img src="{{ collection.image | image_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
+                <button>Abaya for Women</button>
+            </div>
+
+            <!-- Jilbabs -->
+            <div class="item jilbab">
+                 <img src="{{ collection.image | image_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
+                <button>Jilbabs</button>
+            </div>
+
+            <!-- Kaftans -->
+            <div class="item kaftan">
+                 <img src="{{ collection.image | image_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
+                <button>Kaftan</button>
+            </div>
+
+            <!-- Hijab Scarfs -->
+            <div class="item hijab">
+                 <img src="{{ collection.image | image_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
+                <button>Hijab Scarfs</button>
+            </div>
+        </div>
+    </section>
 
 {% schema %}
   {
