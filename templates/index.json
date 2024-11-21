@@ -126,32 +126,11 @@
     },
     "custom_collection_grid1_moiz_bRJWEz": {
       "type": "CustomCollectionGrid1Moiz",
-      "blocks": {
-        "collection_RTXydb": {
-          "type": "collection",
-          "settings": {}
-        },
-        "collection_bxMMzE": {
-          "type": "collection",
-          "settings": {}
-        },
-        "collection_nYmn9d": {
-          "type": "collection",
-          "settings": {}
-        },
-        "collection_a7CzQA": {
-          "type": "collection",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "collection_RTXydb",
-        "collection_bxMMzE",
-        "collection_nYmn9d",
-        "collection_a7CzQA"
-      ],
       "settings": {
-        "collectionName": "Women"
+        "collection1": "men-bags",
+        "collection2": "men-jackets",
+        "collection3": "men-bags",
+        "collection4": "men-jackets"
       }
     },
     "custom_collage_JrKgdM": {
