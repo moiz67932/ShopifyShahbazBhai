@@ -18,7 +18,7 @@
 </div>
 {% endcomment %}
 
-<section class="container">
+<section class="custom-collection-grid">
         <h1>WOMEN</h1>
         <p>Abayas, Jilbabs, Jalabiyas, Kaftans, Hijab Scarfs & more</p>
 
@@ -50,24 +50,18 @@
     </section>
 
     <style>
-.container {
+      /* Wrap the entire section with a unique ID or class */
+#custom-collection-grid .container {
     text-align: center;
     padding: 20px;
 }
 
-.container h1 {
+#custom-collection-grid .container h1 {
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.container p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* Grid layout */
-.grid {
+#custom-collection-grid .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -76,8 +70,7 @@
     padding: 20px;
 }
 
-/* Grid items */
-.item {
+#custom-collection-grid .item {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -85,12 +78,12 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.item img {
+#custom-collection-grid .item img {
     width: 100%;
     height: auto;
 }
 
-.item button {
+#custom-collection-grid .item button {
     width: 100%;
     padding: 10px 0;
     background-color: #444;
@@ -100,26 +93,11 @@
     font-size: 1rem;
 }
 
-.item button:hover {
+#custom-collection-grid .item button:hover {
     background-color: #555;
 }
 
-/* Specific item styles */
-.abaya img {
-    background-color: #e3e8f0;
-}
-
-.jilbab img {
-    background-color: #f4e1d2;
-}
-
-.kaftan img {
-    background-color: #d6e8e3;
-}
-
-.hijab img {
-    background-color: #f5d4d6;
-}</style>
+    </style>
 
 {% schema %}
   {
