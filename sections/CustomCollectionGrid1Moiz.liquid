@@ -23,30 +23,38 @@
         <p>Abayas, Jilbabs, Jalabiyas, Kaftans, Hijab Scarfs & more</p>
 
         <div class="grid">
-            <!-- Abayas -->
-            <div class="item abaya">
-                 <img src="{{ collection.image | image_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
-                <button>Abaya for Women</button>
-            </div>
-
-            <!-- Jilbabs -->
-            <div class="item jilbab">
-                 <img src="{{ collection.image | image_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
-                <button>Jilbabs</button>
-            </div>
-
-            <!-- Kaftans -->
-            <div class="item kaftan">
-                 <img src="{{ collection.image | image_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
-                <button>Kaftan</button>
-            </div>
-
-            <!-- Hijab Scarfs -->
-            <div class="item hijab">
-                 <img src="{{ collection.image | image_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
-                <button>Hijab Scarfs</button>
-            </div>
+           <!-- Abayas -->
+        <div class="item abaya">
+            <a href="{{ section.settings.collection1.url }}">
+                <img src="{{ section.settings.collection1 | image_url: '300x300' }}" alt="{{ section.settings.collection1.title }}" height="300" width="300">
+            </a>
+            <button>Abaya for Women</button>
         </div>
+
+        <!-- Jilbabs -->
+        <div class="item jilbab">
+            <a href="{{ section.settings.collection2.url }}">
+                <img src="{{ section.settings.collection2 | image_url: '300x300' }}" alt="{{ section.settings.collection2.title }}" height="300" width="300">
+            </a>
+            <button>Jilbabs</button>
+        </div>
+
+        <!-- Kaftans -->
+        <div class="item kaftan">
+            <a href="{{ section.settings.collection3.url }}">
+                <img src="{{ section.settings.collection3 | image_url: '300x300' }}" alt="{{ section.settings.collection3.title }}" height="300" width="300">
+            </a>
+            <button>Kaftan</button>
+        </div>
+
+        <!-- Hijab Scarfs -->
+        <div class="item hijab">
+            <a href="{{ section.settings.collection4.url }}">
+                <img src="{{ section.settings.collection4 | image_url: '300x300' }}" alt="{{ section.settings.collection4.title }}" height="300" width="300">
+            </a>
+            <button>Hijab Scarfs</button>
+        </div>
+    </div>
     </section>
 
     <style>
@@ -138,7 +146,6 @@
             "type": "collection",
             "label": "Collection5",
             "id": "collection5",
-            
           },
         ]
       }
