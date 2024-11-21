@@ -19,76 +19,95 @@
 {% endcomment %}
 
 <section class="custom-collection-grid">
-        <h1>WOMEN</h1>
-        <p>Abayas, Jilbabs, Jalabiyas, Kaftans, Hijab Scarfs & more</p>
+    <h1>WOMEN</h1>
+    <p>Abayas, Jilbabs, Jalabiyas, Kaftans, Hijab Scarfs & more</p>
 
-        <div class="grid">
-           <!-- Abayas -->
+    <div class="grid">
+        <!-- Abayas - Larger Image -->
         <div class="item abaya">
             <a href="{{ section.settings.collection1.url }}">
-                <img src="{{ section.settings.collection1.image | image_url }}" alt="{{ section.settings.collection1.title }}" height="300" width="300">
+                <img src="{{ section.settings.collection1.image | image_url }}" alt="{{ section.settings.collection1.title }}">
             </a>
             <button>Abaya for Women</button>
         </div>
 
-        <!-- Jilbabs -->
+        <!-- Jilbabs - Small Image -->
         <div class="item jilbab">
             <a href="{{ section.settings.collection2.url }}">
-                <img src="{{ section.settings.collection2.image | image_url }}" alt="{{ section.settings.collection2.title }}" height="300" width="300">
+                <img src="{{ section.settings.collection2.image | image_url }}" alt="{{ section.settings.collection2.title }}">
             </a>
             <button>Jilbabs</button>
         </div>
 
-        <!-- Kaftans -->
+        <!-- Kaftans - Small Image -->
         <div class="item kaftan">
             <a href="{{ section.settings.collection3.url }}">
-                <img src="{{ section.settings.collection3.image | image_url }}" alt="{{ section.settings.collection3.title }}" height="300" width="300">
+                <img src="{{ section.settings.collection3.image | image_url }}" alt="{{ section.settings.collection3.title }}">
             </a>
             <button>Kaftan</button>
         </div>
 
-        <!-- Hijab Scarfs -->
+        <!-- Hijab Scarfs - Tall, Slim Image -->
         <div class="item hijab">
             <a href="{{ section.settings.collection4.url }}">
-                <img src="{{ section.settings.collection4.image | image_url }}" alt="{{ section.settings.collection4.title }}" height="300" width="300">
+                <img src="{{ section.settings.collection4.image | image_url }}" alt="{{ section.settings.collection4.title }}">
             </a>
             <button>Hijab Scarfs</button>
         </div>
     </div>
-    </section>
+</section>
 
-    <style>
-      /* Wrap the entire section with a unique ID or class */
-.custom-collection-grid .container {
+<style>
+.custom-collection-grid {
     text-align: center;
     padding: 20px;
 }
 
-.custom-collection-grid .container h1 {
+.custom-collection-grid h1 {
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
 .custom-collection-grid .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "abaya abaya"
+        "jilbab kaftan"
+        "hijab hijab";
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     max-width: 750px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 .custom-collection-grid .item {
-    background-color: .fff;
-    border: 1px solid .ddd;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.custom-collection-grid .abaya {
+    grid-area: abaya;
+}
+
+.custom-collection-grid .jilbab {
+    grid-area: jilbab;
+}
+
+.custom-collection-grid .kaftan {
+    grid-area: kaftan;
+}
+
+.custom-collection-grid .hijab {
+    grid-area: hijab;
+}
+
 .custom-collection-grid .item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .custom-collection-grid .item button {
@@ -104,6 +123,7 @@
 .custom-collection-grid .item button:hover {
     background-color: #555;
 }
+</style>
 
     </style>
 {% schema %}
