@@ -3,7 +3,7 @@
     <p>Abayas, Jilbabs, Jalabiyas, Kaftans, Hijab Scarfs & more</p>
 
     <div class="grid">
-        <!-- Abayas - Larger Image -->
+        <!-- Abayas - Taller Image -->
         <div class="item abaya">
             <a href="{{ section.settings.collection1.url }}">
                 <img src="{{ section.settings.collection1.image | image_url }}" alt="{{ section.settings.collection1.title }}">
@@ -11,7 +11,7 @@
             <button>Abaya for Women</button>
         </div>
 
-        <!-- Jilbabs - Small Image -->
+        <!-- Jilbabs - Short Image -->
         <div class="item jilbab">
             <a href="{{ section.settings.collection2.url }}">
                 <img src="{{ section.settings.collection2.image | image_url }}" alt="{{ section.settings.collection2.title }}">
@@ -19,7 +19,7 @@
             <button>Jilbabs</button>
         </div>
 
-        <!-- Kaftans - Small Image -->
+        <!-- Kaftans - Short Image below Jilbabs -->
         <div class="item kaftan">
             <a href="{{ section.settings.collection3.url }}">
                 <img src="{{ section.settings.collection3.image | image_url }}" alt="{{ section.settings.collection3.title }}">
@@ -27,7 +27,7 @@
             <button>Kaftan</button>
         </div>
 
-        <!-- Hijab Scarfs - Tall, Slim Image -->
+        <!-- Hijab Scarfs - Taller Image -->
         <div class="item hijab">
             <a href="{{ section.settings.collection4.url }}">
                 <img src="{{ section.settings.collection4.image | image_url }}" alt="{{ section.settings.collection4.title }}">
@@ -50,8 +50,12 @@
 
 .custom-collection-grid .grid {
     display: grid;
-    grid-template-areas: "abaya jilbab kaftan hijab";
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "abaya jilbab"
+        "abaya kaftan"
+        "hijab hijab";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
     gap: 20px;
     max-width: 1240px;
     margin: 0 auto;
@@ -101,6 +105,7 @@
     background-color: #555;
 }
 </style>
+
 
 {% schema %}
 {
