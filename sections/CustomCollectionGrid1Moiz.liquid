@@ -7,7 +7,7 @@
     {% if collection %}
       <p>{{ collection.title }}</p>
       {% if collection.image %}
-        <img src="{{ collection.image | img_url: '100x100' }}" alt="{{ collection.title }}" height="100" width="100">
+        <img src="{{ collection.image | img_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
       {% else %}
         <p>No image available for {{ collection.title }}</p>
       {% endif %}
@@ -25,32 +25,31 @@
         <div class="grid">
             <!-- Abayas -->
             <div class="item abaya">
-                 <img src="{{ collection.image | image_url: '100x100' }}" alt="{{ collection.title }}" height="100" width="100">
+                 <img src="{{ collection.image | image_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
                 <button>Abaya for Women</button>
             </div>
 
             <!-- Jilbabs -->
             <div class="item jilbab">
-                 <img src="{{ collection.image | image_url: '100x100' }}" alt="{{ collection.title }}" height="100" width="100">
+                 <img src="{{ collection.image | image_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
                 <button>Jilbabs</button>
             </div>
 
             <!-- Kaftans -->
             <div class="item kaftan">
-                 <img src="{{ collection.image | image_url: '100x100' }}" alt="{{ collection.title }}" height="100" width="100">
+                 <img src="{{ collection.image | image_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
                 <button>Kaftan</button>
             </div>
 
             <!-- Hijab Scarfs -->
             <div class="item hijab">
-                 <img src="{{ collection.image | image_url: '100x100' }}" alt="{{ collection.title }}" height="100" width="100">
+                 <img src="{{ collection.image | image_url: '300x300' }}" alt="{{ collection.title }}" height="300" width="300">
                 <button>Hijab Scarfs</button>
             </div>
         </div>
     </section>
 
     <style>
-      
 .container {
     text-align: center;
     padding: 20px;
@@ -87,12 +86,12 @@
 }
 
 .item img {
-    width: 100px;
+    width: 100%;
     height: auto;
 }
 
 .item button {
-    width: 100px;
+    width: 100%;
     padding: 10px 0;
     background-color: #444;
     color: #fff;
@@ -120,8 +119,7 @@
 
 .hijab img {
     background-color: #f5d4d6;
-}
-    </style>
+}</style>
 
 {% schema %}
   {
