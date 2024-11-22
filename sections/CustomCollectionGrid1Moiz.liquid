@@ -1,39 +1,39 @@
 <section class="custom-collection-grid">
-    <h1>WOMEN</h1>
-    <p>Abayas, Jilbabs, Jalabiyas, Kaftans, Hijab Scarfs & more</p>
+<h1>{{ section.settings.heading_text }}</h1>
+<p>{{ section.settings.subheading_text }}</p>
+
 
     <div class="grid">
         <!-- Abayas - Taller Image -->
         <div class="item abaya">
             <a href="{{ section.settings.collection1.url }}">
                 <img src="{{ section.settings.collection1.image | image_url }}" alt="{{ section.settings.collection1.title }}">
-            </a>
             <button>Abaya for Women</button>
+            </a>
         </div>
 
         <!-- Jilbabs - Short Image -->
         <div class="item jilbab">
             <a href="{{ section.settings.collection2.url }}">
                 <img src="{{ section.settings.collection2.image | image_url }}" alt="{{ section.settings.collection2.title }}">
-            </a>
             <button>Jilbabs</button>
+            </a>
         </div>
 
         <!-- Kaftans - Short Image below Jilbabs -->
         <div class="item kaftan">
-                <img src="{{ section.settings.collection3.image | image_url }}" alt="{{ section.settings.collection3.title }}">
             <a href="{{ section.settings.collection3.url }}">
+                <img src="{{ section.settings.collection3.image | image_url }}" alt="{{ section.settings.collection3.title }}">
             <button>Kaftan</button>
             </a>
         </div>
 
         <!-- Hijab Scarfs - Taller Image -->
         <div class="item hijab">
-                <img src="{{ section.settings.collection4.image | image_url }}" alt="{{ section.settings.collection4.title }}">
             <a href="{{ section.settings.collection4.url }}">
+                <img src="{{ section.settings.collection4.image | image_url }}" alt="{{ section.settings.collection4.title }}">
             <button>Hijab Scarfs</button>
             </a>
-            
         </div>
     </div>
 </section>
