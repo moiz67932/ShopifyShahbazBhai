@@ -36,8 +36,11 @@
     height: 100%;
     object-fit: cover;
   }
-  .image-with-text__content{
-    justify-content: space-between;
+  .image-with-text__text-item{
+      display: flex;
+  flex-direction: column;  /* Stack content vertically */
+  justify-content: space-between; /* Push content to top and bottom */
+  height: 100vh;
   }
 
 {%- endstyle -%}
