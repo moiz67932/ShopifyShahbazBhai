@@ -337,7 +337,9 @@
         "text_4BVJtW",
         "button_NYBryN"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".image-with-text__content{justify-content:space-between;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/Jackets.jpg",
         "leftSmallImage": "shopify://shop_images/woman-in-orange-zip-up-jacket.jpeg",
