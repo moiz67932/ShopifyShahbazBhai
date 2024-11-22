@@ -127,6 +127,8 @@
     "custom_collection_grid1_moiz_bRJWEz": {
       "type": "CustomCollectionGrid1Moiz",
       "settings": {
+        "heading_text": "Men Jackets",
+        "subheading_text": "The Premium Men Leather Jackets",
         "collection1": "men-bags",
         "collection2": "men-jackets",
         "collection3": "men-bags",
