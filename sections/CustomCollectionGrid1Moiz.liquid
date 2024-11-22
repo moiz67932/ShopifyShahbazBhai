@@ -1,14 +1,13 @@
 <section class="custom-collection-grid">
-<h1>{{ section.settings.heading_text }}</h1>
-<p>{{ section.settings.subheading_text }}</p>
-
+    <h1>{{ section.settings.heading_text }}</h1>
+    <p>{{ section.settings.subheading_text }}</p>
 
     <div class="grid">
         <!-- Abayas - Taller Image -->
         <div class="item abaya">
             <a href="{{ section.settings.collection1.url }}">
                 <img src="{{ section.settings.collection1.image | image_url }}" alt="{{ section.settings.collection1.title }}">
-            <button>Abaya for Women</button>
+                <button>Abaya for Women</button>
             </a>
         </div>
 
@@ -16,7 +15,7 @@
         <div class="item jilbab">
             <a href="{{ section.settings.collection2.url }}">
                 <img src="{{ section.settings.collection2.image | image_url }}" alt="{{ section.settings.collection2.title }}">
-            <button>Jilbabs</button>
+                <button>Jilbabs</button>
             </a>
         </div>
 
@@ -24,7 +23,7 @@
         <div class="item kaftan">
             <a href="{{ section.settings.collection3.url }}">
                 <img src="{{ section.settings.collection3.image | image_url }}" alt="{{ section.settings.collection3.title }}">
-            <button>Kaftan</button>
+                <button>Kaftan</button>
             </a>
         </div>
 
@@ -32,7 +31,7 @@
         <div class="item hijab">
             <a href="{{ section.settings.collection4.url }}">
                 <img src="{{ section.settings.collection4.image | image_url }}" alt="{{ section.settings.collection4.title }}">
-            <button>Hijab Scarfs</button>
+                <button>Hijab Scarfs</button>
             </a>
         </div>
     </div>
@@ -42,7 +41,7 @@
 .custom-collection-grid {
     text-align: center;
     padding: 20px;
-    margin-bottom:40px;
+    margin-bottom: 40px;
 }
 
 .custom-collection-grid h1 {
@@ -63,6 +62,7 @@
 }
 
 .custom-collection-grid .item {
+    position: relative;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -72,22 +72,22 @@
 
 .custom-collection-grid .abaya {
     grid-area: abaya;
-  max-height:520px;
+    max-height: 520px;
 }
 
 .custom-collection-grid .jilbab {
     grid-area: jilbab;
-  max-height:250px;
+    max-height: 250px;
 }
 
 .custom-collection-grid .kaftan {
     grid-area: kaftan;
-  max-height:250px;
+    max-height: 250px;
 }
 
 .custom-collection-grid .hijab {
     grid-area: hijab;
-  max-height:520px;
+    max-height: 520px;
 }
 
 .custom-collection-grid .item img {
@@ -97,22 +97,24 @@
 }
 
 .custom-collection-grid .item button {
-  z-index:2;
-  margin-bottom:-200px;
-    width: 100%;
-    padding: 10px 0;
-    background-color: #444;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .custom-collection-grid .item button:hover {
-    background-color: #555;
+    background-color: rgba(0, 0, 0, 0.85);
 }
 </style>
-
 
 {% schema %}
 {
