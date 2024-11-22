@@ -135,29 +135,6 @@
         "collection4": "men-jackets"
       }
     },
-    "custom_collage_JrKgdM": {
-      "type": "custom-collage",
-      "disabled": true,
-      "settings": {
-        "heading": "Signature Collection",
-        "description": "Our Signature Collections blend elegance with functionality, ensuring every product stands as a testament to timeless sophistication.",
-        "btn_link": "",
-        "btn_text": "Shop Now",
-        "btn_color": "#1773b0",
-        "image1_link": "",
-        "image1_alt": "Jafferjees Store",
-        "image1_width": "500",
-        "image1_height": "500",
-        "image2_link": "",
-        "image2_alt": "Jafferjees Store",
-        "image2_width": "500",
-        "image2_height": "500",
-        "main_image_link": "",
-        "main_image_alt": "Jafferjees Store",
-        "main_image_width": "1000",
-        "main_image_height": "1000"
-      }
-    },
     "collage_cdnE3P": {
       "type": "collage",
       "blocks": {
@@ -560,7 +537,6 @@
     "slideshow_NYqgwN",
     "rich_text_CjbypF",
     "custom_collection_grid1_moiz_bRJWEz",
-    "custom_collage_JrKgdM",
     "collage_cdnE3P",
     "collage_J6FfcA",
     "collection_list_Hhb4p7",
