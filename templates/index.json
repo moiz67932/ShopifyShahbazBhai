@@ -312,14 +312,14 @@
         "heading_M96JtY": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Dinner & Dance",
             "heading_size": "h1"
           }
         },
         "text_4BVJtW": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>From sleek clutches to stylish shoulder bags, our Dinner & Dance range offers sophisticated accessories to elevate your evening ensemble. Discover the full collection today and find the perfect finishing touch to complete your look.</p><p></p>",
             "text_style": "body"
           }
         },
