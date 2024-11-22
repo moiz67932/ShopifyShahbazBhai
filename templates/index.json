@@ -338,7 +338,7 @@
         "button_NYBryN"
       ],
       "custom_css": [
-        ".image-with-text__content {padding-top: 0px; padding-down: 0px; display: flex; justify-content: spac;}"
+        ".image-with-text__content {padding-top: 0px; padding-bottom: 0px; display: flex; justify-content: space-between;}"
       ],
       "settings": {
         "image": "shopify://shop_images/Jackets.jpg",
