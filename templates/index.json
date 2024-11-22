@@ -341,7 +341,7 @@
         "image": "shopify://shop_images/Jackets.jpg",
         "leftSmallImage": "shopify://shop_images/woman-in-orange-zip-up-jacket.jpeg",
         "rightSmallImage": "shopify://shop_images/dark-haired-man-in-brown-leather-jacket.jpg",
-        "height": "large",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
