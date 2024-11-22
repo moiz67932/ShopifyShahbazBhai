@@ -340,7 +340,7 @@
       "settings": {
         "image": "shopify://shop_images/Jackets.jpg",
         "leftSmallImage": "shopify://shop_images/woman-in-orange-zip-up-jacket.jpeg",
-        "righttSmallImage": "shopify://shop_images/dark-haired-man-in-brown-leather-jacket.jpg",
+        "rightSmallImage": "shopify://shop_images/dark-haired-man-in-brown-leather-jacket.jpg",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",

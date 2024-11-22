@@ -29,10 +29,10 @@
   .smallTwoImages{
     display: flex;
     gap:10px;
-    max-height:150px;
+    max-height:200px;
   }
   .smallTwoImages img{
-        width: 100%;
+       width: 50%;
     height: 100%;
     object-fit: cover;
   }
@@ -125,8 +125,8 @@
               {%- endcase -%}
             {%- endfor -%}
             <div class="smallTwoImages">
-              <img src="{{ section.settings.leftSmallImage | image_url }}" alt="Leather Product Image"/>
-              <img src="{{ section.settings.rightSmallImage | image_url }}" alt="Leather Product Image"/>
+              <img src="{{ section.settings.leftSmallImage | image_url }}" alt="Leather Product Image">
+              <img src="{{ section.settings.rightSmallImage | image_url }}" alt="Leather Product Image">
             </div>
           </div>
         </div>
