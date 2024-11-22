@@ -326,8 +326,8 @@
         "button_NYBryN": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/men-jackets",
             "button_style_secondary": false
           }
         }
@@ -386,6 +386,7 @@
         "text_ftmr4D",
         "button_aYKidA"
       ],
+      "disabled": true,
       "custom_css": [
         "a {text-transform: uppercase; font-weight: 600; font-size: 17px; background-color: #1874b4;}"
       ],
