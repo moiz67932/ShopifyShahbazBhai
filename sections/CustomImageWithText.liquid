@@ -1,30 +1,36 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
-  }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
 
   h2 {
-}
-p {
-  font-size: 20px;
-  line-height: 23px;
-}
-a {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 17px;
-  background-color: #1874b4;
-}
+  }
+  p {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  a {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #1874b4;
+  }
+
+  .smallTwoImages{
+    display: flex;
+    gap:10px;
+    
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -113,6 +119,10 @@ a {
                   {%- endif -%}
               {%- endcase -%}
             {%- endfor -%}
+            <div class="smallTwoImages">
+              <img src="{{ section.settings.leftSmallImage | image_url }}" alt="Leather Product Image">
+              <img src="{{ section.settings.rightSmallImage | image_url }}" alt="Leather Product Image">
+            </div>
           </div>
         </div>
       </div>
