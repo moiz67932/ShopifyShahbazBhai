@@ -176,12 +176,6 @@
     "custom_product_card_QPTYac": {
       "type": "CustomProductCard",
       "blocks": {
-        "product_3QpLry": {
-          "type": "product",
-          "settings": {
-            "product": "dummy-jacket"
-          }
-        },
         "product_wUqhzd": {
           "type": "product",
           "settings": {
@@ -199,13 +193,19 @@
           "settings": {
             "product": "dummy-jacket-4"
           }
+        },
+        "product_byqmM9": {
+          "type": "product",
+          "settings": {
+            "product": "dummy-jacket"
+          }
         }
       },
       "block_order": [
-        "product_3QpLry",
         "product_wUqhzd",
         "product_EnYcch",
-        "product_3LEWVe"
+        "product_3LEWVe",
+        "product_byqmM9"
       ],
       "custom_css": [],
       "settings": {
