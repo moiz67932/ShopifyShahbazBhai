@@ -1,6 +1,580 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{{ 'flickity.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'flickity.pkgd.js' | asset_url }}" defer></script>
+
+<div class="carousel carousel--crossbox">
+  <div class="slider" id="slider-{{ section.id }}">
+    <ul
+      id="carousel-{{ section.id }}"
+      class="slider__grid--{{ section.id }} carousel--flickity-init"
+      role="carousel"
+      {% if section.settings.is_slider %}
+        data-flickity='
+          { "pageDots": false, "fullscreen": true, "draggable": true
+          }
+        '
+      {% endif %}
+    >
+      {% for block in section.blocks %}
+        <div class="carousel--cell-container" style="background: {{ block.settings.background }}">
+          {%- liquid
+            if block.settings.image != blank
+              assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
+              assign sizes = '100vw'
+              assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+            else
+              assign height = block.settings.product_set.featured_image.width | divided_by: block.settings.product_set.featured_image.aspect_ratio | round
+              assign sizes = '100vw'
+              assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+            endif
+          -%}
+          {%- if forloop.first %}
+            {% if block.settings.image != blank -%}
+              {{-
+                block.settings.image
+                | image_url: width: 3840
+                | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: 'high'
+              }}
+            {% else %}
+              {{
+                block.settings.product_set.featured_image
+                | image_url: width: 3840
+                | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: 'high'
+              }}
+            {% endif %}
+          {%- else -%}
+            {% if block.settings.image != blank -%}
+              {{-
+                block.settings.image
+                | image_url: width: 3840
+                | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+              }}
+            {% else %}
+              {{
+                block.settings.product_set.featured_image
+                | image_url: width: 3840
+                | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+              }}
+            {% endif %}
+          {%- endif -%}
+          <div class="text-container">
+            <div class="text-fill">
+              {% if block.settings.product_title != blank %}
+                {{ block.settings.product_title }}
+              {% else %}
+                {{ block.settings.product_set.title }}
+              {% endif %}
+            </div>
+            <div class="text-stroke">
+              {% if block.settings.product_title != blank %}
+                {{ block.settings.product_title }}
+              {% else %}
+                {{ block.settings.product_set.title }}
+              {% endif %}
+            </div>
+          </div>
+          <div class="product-info-container">
+            {% if block.settings.show_price %}
+              <h3 class="price--heading">{{ block.settings.product_set.price | money }}</h3>
+            {% endif %}
+            {% if block.settings.product_description != blank %}
+              <p class="product--info">
+                {{ block.settings.product_description | strip_html }}
+              </p>
+            {% endif %}
+          </div>
+          {% if block.settings.button_text != blank %}
+            <div class="shop-now-container">
+              <a
+                class="shop-now-btn"
+                href="{{block.settings.product_set.url}}  "
+              >
+                {{- block.settings.button_text -}}
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<style>
+        .carousel--flickity-init {
+          position: relative;
+          height: 100vh;
+          padding: 0;
+        }
+        .carousel--flickity-init .flickity-slider {
+          display: flex;
+          align-items: center;
+        }
+
+        .carousel--flickity-init .flickity-viewport {
+          height: 100vh !important;
+        }
+        .carousel--cell-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+        }
+        .carousel--cell-container img {
+          width: 100%;
+          height: auto;
+          max-width: 610px;
+          {% if section.settings.keep_animation %}
+          animation: moveUpDown 4s linear infinite;
+          transition: transform 0.5s ease; /* Smooth out adjustments */
+          transform: translateX(var(--translateX)); /* Use the CSS variable */
+          {% endif %}
+        }
+
+        @keyframes moveUpDown {
+          0%,
+          100% {
+            transform: translateY(10px) translateX(var(--translateX));
+          }
+          50% {
+            transform: translateY(-10px) translateX(var(--translateX));
+          }
+        }
+
+        .text-container {
+          position: absolute;
+          font-size: {{section.settings.font_size}}px;
+          font-weight: bold;
+          text-align: center;
+          min-height: -webkit-fill-available;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          max-width: 1000px;
+          line-height: 100%;
+        }
+
+        .text-fill,
+        .text-stroke {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: fit-content;
+                }
+
+        .text-fill {
+          color: transparent;
+          background: linear-gradient(
+            to right,
+            hsla(0, 0%, 100%, 1) 0%,
+            hsla(0, 0%, 100%, 1) 30%,
+            /* Color starts and instantly transitions at 30% */ transparent 30%,
+            /* Instant transition to transparency */ transparent 70%,
+            /* Transparent stays until 70% */ hsla(0, 0%, 100%, 1) 70% /* Instant transition back to color */
+          );
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+
+        .text-stroke {
+          -webkit-text-stroke: 1px #fff; /* Adjust stroke width as needed */
+          color: transparent; /* Hide the fill color */
+          z-index: -1; /* Ensure the stroke text is below the fill text */
+        }
+
+        .shop-now-btn {
+          font-size: 24px;
+          font-weight: 600;
+          color: rgb(255, 255, 255);
+          text-transform: uppercase;
+          text-decoration: none;
+          letter-spacing: 3px;
+          line-height: 60px;
+          text-align: left;
+          white-space: normal;
+          overflow: visible;
+          margin: 0px;
+          padding: 0px;
+          width: auto;
+          height: auto;
+          /* float: none; */
+          /* clear: none; */
+          /* border-style: solid; */
+          z-index: 7;
+          position: relative;
+          vertical-align: inherit;
+          transform-origin: 50% 50%;
+          transform: translate3d(0px, 0px, 0px);
+          display: inline-block;
+          background: rgba(0, 0, 0, 0);
+          visibility: inherit;
+          opacity: 1;
+          border-color: rgba(255, 255, 255, 0.35);
+          border-bottom: 1px solid;
+        }
+
+        .product-info-container {
+          position: absolute;
+          bottom: 5%;
+          left: 25%;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .price--heading {
+          font-size: 35px;
+          font-weight: 600;
+          color: rgb(255, 255, 255);
+          text-transform: none;
+          text-decoration: none;
+          letter-spacing: 0px;
+          line-height: 35px;
+          text-align: left;
+          white-space: normal;
+          overflow: visible;
+          margin: 0px;
+          padding: 0px;
+          width: auto;
+          height: auto;
+          float: none;
+          clear: none;
+          z-index: 9;
+          position: relative;
+          vertical-align: inherit;
+          transform-origin: 50% 50%;
+          transform: translate(0px, 0px);
+          display: block;
+          background: transparent;
+          visibility: inherit;
+          opacity: 1;
+          pointer-events: auto;
+        }
+
+        .product--info {
+          font-size: 16px;
+          font-weight: 400;
+          color: rgba(255, 255, 255, 0.7);
+          text-transform: none;
+          text-decoration: none;
+          letter-spacing: 0px;
+          line-height: 30px;
+          text-align: left;
+          white-space: normal;
+          overflow: visible;
+          margin: 0px;
+          padding: 0px 83px 0px 0px;
+          width: auto;
+          height: auto;
+          float: none;
+          clear: none;
+          z-index: 7;
+          position: relative;
+          vertical-align: inherit;
+          transform-origin: 50% 50%;
+          transform: translate(0px, 0px);
+          display: block;
+          background: transparent;
+          visibility: inherit;
+          opacity: 1;
+          pointer-events: auto;
+          max-width: 500px;
+        }
+
+        .shop-now-container {
+          position: absolute;
+          bottom: 5%;
+          right: 25%;
+        }
+
+        .carousel--crossbox {
+          overflow-y: scroll;
+        }
+
+        .flickity-prev-next-button .flickity-button-icon {
+          fill: white;
+          max-width: 40px;
+          position: relative;
+          fill: white;
+          max-width: 40px;
+          position: relative;
+          top: auto;
+          left: auto;
+        }
+
+        .flickity-button:disabled {
+          display: none;
+        }
+
+        .flickity-prev-next-button {
+          background: transparent;
+          border: 1px solid #fff;
+          width: min(10vw, 300px);
+          height: min(10vw, 300px);
+        }
+
+        .flickity-prev-next-button:hover {
+          background: transparent;
+        }
+
+        @media only screen and (max-width: 1500px){
+          .text-container {
+            font-size: min(10vw , 130px);
+        }
+        .shop-now-btn{
+          font-size: 19px;
+          line-height: 37px;
+          line-height: 24px;
+          text-align: center;
+          overflow: visible;
+          padding: 0px;
+          width: fit-content;
+          height: auto;
+          float: none;
+          clear: none;
+          z-index: 7;
+          position: relative;
+          vertical-align: bottom;
+          transform-origin: 50% 50%;
+          transform: translate(0px, 0px);
+          /* display: block; */
+          background: transparent;
+          visibility: inherit;
+          opacity: 1;
+          pointer-events: auto;
+          MIN-WIDTH: FIT-CONTENT;
+          border-color: rgba(255, 255, 255, 0.35);
+          border-bottom: 1px solid;
+        }
+
+      .shop-now-container{
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        min-width: fit-content;
+        text-align: center;
+      }
+
+      .product-info-container{
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .product--info{
+        font-size: 13px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: none;
+        text-decoration: none;
+        letter-spacing: 0px;
+        line-height: 23px;
+        text-align: center;
+        white-space: normal;
+        overflow: visible;
+        margin: 9px 0px 14px;
+        padding: 0px;
+        width: auto;
+        height: auto;
+        float: none;
+        clear: none;
+        z-index: 7;
+        position: relative;
+        vertical-align: inherit;
+        transform-origin: 50% 50%;
+        transform: translate(0px, 0px);
+        display: block;
+        background: transparent;
+        visibility: inherit;
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .price--heading{
+        font-size: 23px;
+        font-weight: 600;
+        color: rgb(255, 255, 255);
+        text-transform: none;
+        text-decoration: none;
+        letter-spacing: 0px;
+        line-height: 28px;
+        text-align: center;
+        white-space: normal;
+        overflow: visible;
+        margin: 0px;
+        padding: 0px;
+        width: auto;
+        height: auto;
+        float: none;
+        clear: none;
+        z-index: 9;
+        position: relative;
+        vertical-align: inherit;
+        transform-origin: 50% 50%;
+        transform: translate(0px, 0px);
+        display: block;
+        background: transparent;
+        visibility: inherit;
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .carousel--cell-container img{
+        max-width: 420px;
+    }
+
+    .flickity-prev-next-button .flickity-button-icon{
+      max-width: 20px;
+
+    }
   }
+</style>
+
+{% if section.settings.keep_animation %}
+  <script>
+    // Select all carousel cell container images
+    const imgs = document.querySelectorAll('.carousel--cell-container img');
+
+    // Store current and target positions for each image
+    const positions = Array.from(imgs).map(() => ({
+      currentTranslateX: 0,
+      targetTranslateX: 0,
+    }));
+
+    // Function to update position for each image
+    function updatePosition() {
+      imgs.forEach((img, index) => {
+        if (!img) return;
+
+        // Access the current and target positions for this image
+        let { currentTranslateX, targetTranslateX } = positions[index];
+        const dx = targetTranslateX - currentTranslateX;
+
+        // Adjust speed differently based on the direction of the movement
+        // Increase speed a bit when moving left to right (dx > 0)
+        const speedAdjustmentFactor = dx > 0 ? 0.003 : 0.002;
+        currentTranslateX += dx * speedAdjustmentFactor;
+
+        // Update the position in the positions array
+        positions[index].currentTranslateX = currentTranslateX;
+
+        // Update the CSS variable for horizontal translation
+        img.style.setProperty('--translateX', `${currentTranslateX}px`);
+      });
+
+      requestAnimationFrame(updatePosition);
+    }
+
+    // Initialize the continuous update for all images
+    requestAnimationFrame(updatePosition);
+
+    // Event listener for mouse movement
+    document.addEventListener('mousemove', (e) => {
+      imgs.forEach((img, index) => {
+        if (!img) return;
+
+        const rect = img.getBoundingClientRect();
+        // Adjust limits as needed and calculate the desired target position based on mouse location
+        positions[index].targetTranslateX = Math.min(Math.max(e.clientX - rect.left - rect.width / 2, -50), 50);
+      });
+    });
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "CrossBox Slideshow",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "is_slider",
+      "label": "Enable Slider",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "keep_animation",
+      "label": "Keep Animation",
+      "default": true
+    },
+    {
+      "type": "range",
+      "label": "Font Size Title",
+      "id": "font_size",
+      "min": 80,
+      "max": 160,
+      "step": 10,
+      "default": 160
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product_set",
+          "label": "Product to Set"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Picture",
+          "info": "When not selected, the product image will be used, use png transparent images for better results."
+        },
+        {
+          "type": "text",
+          "label": "Product Title",
+          "id": "product_title",
+          "default": "Product Title",
+          "info": "If empty, the product title will be used."
+        },
+        {
+          "type": "checkbox",
+          "label": "Show Price",
+          "id": "show_price",
+          "default": true
+        },
+        {
+          "type": "richtext",
+          "label": "Product Description",
+          "id": "product_description",
+          "default": "<p>A CrossBox Digital LTD. creation</p>",
+          "info": "If empty, the description will be hidden."
+        },
+        {
+          "type": "text",
+          "label": "Button Text",
+          "id": "button_text",
+          "default": "Shop Now",
+          "info": "Leave empty to hide the button."
+        },
+        {
+          "type": "text",
+          "id": "background",
+          "label": "Background Color",
+          "default": "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,17,126,1) 19%, rgba(78,9,121,1) 47%, rgba(61,54,151,1) 93%, rgba(106,26,210,1) 100%);"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CrossBox Slideshow",
+      "blocks": []
+    }
+  ]
+}
 {% endschema %}
