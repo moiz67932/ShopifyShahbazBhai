@@ -11,7 +11,9 @@
   "sections": {
     "custom_product_card_QPTYac": {
       "type": "CustomProductCard",
-      "custom_css": [],
+      "custom_css": [
+        ".card__content{max-height:100px;}"
+      ],
       "settings": {
         "product_list": [
           "dummy-jacket",
