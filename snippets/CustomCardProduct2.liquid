@@ -233,13 +233,15 @@
             </a>
           </h3>
           {% comment %} Other Info {% endcomment %}
-          <div class="card-information product_price">
+          <div class="card-information ">
             {% comment %} Custom For Price {% endcomment %}
             {%- if show_price -%}
               <span class="visually-hidden ">
-                <p>{{ 'accessibility.price' | t }}</p>
+                {{ 'accessibility.price' | t }}
               </span>
-              <div class="caption-with-letter-spacing light product__price">{{ card_product.price | money }}</div>
+              <div class="caption-with-letter-spacing light product__price product_price">
+                <p>{{ card_product.price | money }}</p>
+              </div>
             {%- endif -%}
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
