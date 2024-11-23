@@ -51,7 +51,6 @@
         "slide_nqGYkR",
         "slide_GBqRAt"
       ],
-      "disabled": true,
       "custom_css": [
         ".banner__box {background-color: transparent;}",
         ".banner__buttons {border-radius: 20px;}",
@@ -88,6 +87,7 @@
       "block_order": [
         "product_Haz6yc"
       ],
+      "disabled": true,
       "custom_css": [
         "h3 {font-size: 10px;}"
       ],
