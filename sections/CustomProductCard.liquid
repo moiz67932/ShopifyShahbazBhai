@@ -4,13 +4,15 @@
 
 <div class="container">
   <div class="productCard">
-    {% render 'CustomCardProduct2',
-      card_product: section.settings.product,
-      show_secondary_image: true,
-      show_price: true,
-      lazy_load: true,
-      show_quick_add: true
-    %}
+    {% for i in (1..4) %}
+      {% render 'CustomCardProduct2',
+        card_product: section.settings.product,
+        show_secondary_image: true,
+        show_price: true,
+        lazy_load: true,
+        show_quick_add: true
+      %}
+    {% endfor %}
   </div>
 </div>
 
