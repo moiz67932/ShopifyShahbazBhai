@@ -211,6 +211,18 @@
           "settings": {
             "product": "dummy-jacket-2"
           }
+        },
+        "product_FmdAVV": {
+          "type": "product",
+          "settings": {
+            "product": "dummy-jacket-3"
+          }
+        },
+        "product_4h3J8H": {
+          "type": "product",
+          "settings": {
+            "product": "dummy-jacket-2"
+          }
         }
       },
       "block_order": [
@@ -219,7 +231,9 @@
         "product_3LEWVe",
         "product_byqmM9",
         "product_jzJack",
-        "product_bqhfEq"
+        "product_bqhfEq",
+        "product_FmdAVV",
+        "product_4h3J8H"
       ],
       "custom_css": [],
       "settings": {
