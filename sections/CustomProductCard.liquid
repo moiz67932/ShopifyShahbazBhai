@@ -184,8 +184,8 @@
       height: 30px;
       border-radius: 50%;
       transition: background-color 0.3s, color 0.3s;
-      position: relative; /* Ensure it can be moved */
-      top: -10px; /* Move the button up by 10px */
+   position: relative; /* Keeps the button in the correct layout context */
+  transform: translateY(-10px);
     }
 
     .flickity-button svg {
