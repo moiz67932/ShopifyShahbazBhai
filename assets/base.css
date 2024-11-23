@@ -3517,3 +3517,9 @@ details-disclosure > details {
   font-family: "TabernaSerif-Regular";
   src: url("{{ '[TabernaSerif-Regular.ttf]' | file_url }}") format("[ttf]");
 }
+
+@font-face {
+  font-family: "BarlowCondensed-SemiBold";
+  src: url("{{ '[BarlowCondensed-SemiBold.ttf]' | file_url }}") format("[ttf]");
+}
+
