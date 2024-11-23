@@ -1,6 +1,3 @@
-{{ 'quick-add.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 <section>
   <h2>{{ section.settings.header }}</h2>
   <div class="container">
@@ -19,6 +16,11 @@
 </section>
 
 <style>
+  section{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
   .container{
     display:flex;
     flex-direction:row;
