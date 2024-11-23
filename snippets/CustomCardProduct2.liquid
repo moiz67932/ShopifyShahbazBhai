@@ -208,10 +208,6 @@
           </h3>
           {% comment %} Other Info {% endcomment %}
           <div class="card-information">
-            {%- if show_vendor -%}
-              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-              <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
-            {%- endif -%}
             {% comment %} Custom For Price {% endcomment %}
             {%- if show_price -%}
               <span class="visually-hidden">{{ 'accessibility.price' | t }}</span>
