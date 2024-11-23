@@ -51,6 +51,7 @@
         "slide_nqGYkR",
         "slide_GBqRAt"
       ],
+      "disabled": true,
       "custom_css": [
         ".banner__box {background-color: transparent;}",
         ".banner__buttons {border-radius: 20px;}",
@@ -66,6 +67,31 @@
         "image_behavior": "none",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "custom_slider_main_4h8JLp": {
+      "type": "CustomSliderMain",
+      "blocks": {
+        "product_Haz6yc": {
+          "type": "product",
+          "settings": {
+            "product_set": "",
+            "image": "shopify://shop_images/mens-fall-jacket-in-black.jpg",
+            "product_title": "Premium Leather Jackets",
+            "show_price": true,
+            "product_description": "<h1>NEW SCHOOL Fit.<br/>OLD SCHOOL GRIT.</h1>",
+            "button_text": "Shop Now",
+            "background": "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,17,126,1) 19%, rgba(78,9,121,1) 47%, rgba(61,54,151,1) 93%, rgba(106,26,210,1) 100%);"
+          }
+        }
+      },
+      "block_order": [
+        "product_Haz6yc"
+      ],
+      "settings": {
+        "is_slider": true,
+        "keep_animation": true,
+        "font_size": 160
       }
     },
     "rich_text_CjbypF": {
@@ -656,6 +682,7 @@
   },
   "order": [
     "slideshow_NYqgwN",
+    "custom_slider_main_4h8JLp",
     "rich_text_CjbypF",
     "custom_collection_grid1_moiz_bRJWEz",
     "collage_cdnE3P",
