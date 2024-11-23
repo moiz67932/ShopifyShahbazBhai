@@ -1,8 +1,10 @@
+{{ 'flickitycss.css' | asset_url | stylesheet_tag }}
+
 <section class="section">
   <h2 class="heading">{{ section.settings.header }}</h2>
-  <div class="container">
+  <div class="container carousel">
     {% for block in section.blocks %}
-      <div class="productCard">
+      <div class="productCard carousel-cell">
         {% render 'CustomCardProduct2',
           card_product: block.settings.product,
           show_secondary_image: true,
@@ -14,6 +16,46 @@
     {% endfor %}
   </div>
 </section>
+
+{{ 'flickityjs.js' | asset_url | script_tag }}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elem = document.querySelector('.carousel');
+    var flkty = new Flickity(elem, {
+      // options
+      cellAlign: 'left',
+      contain: true,
+      pageDots: true,
+      prevNextButtons: true,
+      draggable: true,
+      groupCells: true,
+      adaptiveHeight: false,
+      wrapAround: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            groupCells: 1
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            groupCells: 2
+          }
+        },
+        {
+          breakpoint: 9999,
+          settings: {
+            groupCells: 4
+          }
+        }
+      ]
+    });
+  });
+</script>
+
 <style>
   .heading {
     border: 1px solid #808080;
@@ -151,6 +193,16 @@
       flex: 0 0 calc(25% - 20px);
       max-width: 275px;
     }
+  }
+
+  /* Flickity specific styles */
+  .carousel {
+    width: 100%;
+  }
+
+  .carousel-cell {
+    width: 100%;
+    margin-right: 20px;
   }
 </style>
 
