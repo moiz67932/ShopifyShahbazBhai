@@ -2,40 +2,47 @@
 <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
-<div class="productCard">
-  <div class="productImageWrapper">
-    {% render 'CustomCardProduct',
+<div class="container">
+  <div class="productCard">
+    <div class="productImageWrapper">
+      {% render 'CustomCardProduct',
+        card_product: section.settings.product,
+        show_secondary_image: true,
+        show_price: true,
+        lazy_load: true
+      %}
+      <div class="productOverlay">
+        <div class="buttons">
+          <button class="quickView">Quick View</button>
+          <button class="quickShop">Quick Shop</button>
+        </div>
+        <div class="wishlistWrapper">
+          <i class="heartIcon">&#9825;</i>
+          <span class="wishlistText">Add to Wishlist</span>
+        </div>
+      </div>
+    </div>
+    <div class="productDetails">
+      <h3 class="productTitle">Flare Black Abaya</h3>
+      <p class="productPrice">Rs.13,828.16 PKR</p>
+    </div>
+  </div>
+
+  <div class="productCard">
+    {% render 'card-product',
       card_product: section.settings.product,
       show_secondary_image: true,
       show_price: true,
       lazy_load: true
     %}
-    <div class="productOverlay">
-      <div class="buttons">
-        <button class="quickView">Quick View</button>
-        <button class="quickShop">Quick Shop</button>
-      </div>
-      <div class="wishlistWrapper">
-        <i class="heartIcon">&#9825;</i>
-        <span class="wishlistText">Add to Wishlist</span>
-      </div>
-    </div>
   </div>
-  <div class="productDetails">
-    <h3 class="productTitle">Flare Black Abaya</h3>
-    <p class="productPrice">Rs.13,828.16 PKR</p>
-  </div>
-</div>
-<div class="productCard">
-  {% render 'card-product',
-    card_product: section.settings.product,
-    show_secondary_image: true,
-    show_price: true,
-    lazy_load: true
-  %}
 </div>
 
 <style>
+  .container{
+    display:flex;
+    gap:10px;
+  }
   /* General Card Styling */
   .productCard {
     position: relative;
