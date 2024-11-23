@@ -9,6 +9,17 @@
  */
 {
   "sections": {
+    "custom_product_card_QPTYac": {
+      "type": "CustomProductCard",
+      "settings": {
+        "product_list": [
+          "dummy-jacket",
+          "dummy-jacket-2",
+          "dummy-jacket-3",
+          "dummy-jacket-4"
+        ]
+      }
+    },
     "slideshow_NYqgwN": {
       "type": "slideshow",
       "blocks": {
@@ -67,10 +78,6 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
-    },
-    "custom_product_card_QPTYac": {
-      "type": "CustomProductCard",
-      "settings": {}
     },
     "rich_text_CjbypF": {
       "type": "rich-text",
