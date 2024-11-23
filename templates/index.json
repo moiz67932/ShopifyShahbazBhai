@@ -199,13 +199,27 @@
           "settings": {
             "product": "dummy-jacket-3"
           }
+        },
+        "product_jzJack": {
+          "type": "product",
+          "settings": {
+            "product": "dummy-jacket-3"
+          }
+        },
+        "product_bqhfEq": {
+          "type": "product",
+          "settings": {
+            "product": "dummy-jacket-2"
+          }
         }
       },
       "block_order": [
         "product_wUqhzd",
         "product_EnYcch",
         "product_3LEWVe",
-        "product_byqmM9"
+        "product_byqmM9",
+        "product_jzJack",
+        "product_bqhfEq"
       ],
       "custom_css": [],
       "settings": {
