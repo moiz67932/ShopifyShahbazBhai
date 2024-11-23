@@ -2,7 +2,7 @@
 
 <section class="section">
   <h2 class="heading">{{ section.settings.header }}</h2>
-  <div class="container carousel">
+  <div class="carousel">
     {% for block in section.blocks %}
       <div class="productCard carousel-cell">
         {% render 'CustomCardProduct2',
@@ -30,7 +30,8 @@
       draggable: true,
       adaptiveHeight: false,
       wrapAround: true,
-      groupCells: 4, // Shows 4 cells at a time by default
+      percentPosition: true,
+      groupCells: 4,
       responsive: [
         {
           breakpoint: 768,
@@ -76,23 +77,26 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    margin-bottom:48px;
+    margin-bottom: 48px;
+    padding: 0 15px;
   }
 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 20px;
+  /* Remove conflicting container styles */
+  .carousel {
+    width: 100%;
+    padding: 0;
     margin-top: 30px;
-    padding: 0 15px;
+  }
+
+  /* Adjust carousel cell styles */
+  .carousel-cell {
+    width: 275px; /* Fixed width for all cells */
+    margin-right: 20px;
   }
 
   .productCard {
     position: relative;
     width: 100%;
-    max-width: 275px;
   }
 
   .productOverlay {
@@ -165,16 +169,7 @@
     max-height: 80px;
   }
 
-  /* Flickity specific styles */
-  .carousel {
-    width: 100%;
-  }
-
-  .carousel-cell {
-    width: 100%;
-    margin-right: 20px;
-  }
-
+  /* Custom Flickity styles */
   .flickity-button {
     background: #fff;
     border: 1px solid #ddd;
@@ -202,6 +197,25 @@
 
   .flickity-page-dots .dot.is-selected {
     opacity: 1;
+  }
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .carousel-cell {
+      width: calc(100% - 20px);
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .carousel-cell {
+      width: calc(50% - 20px);
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    .carousel-cell {
+      width: 275px;
+    }
   }
 </style>
 
