@@ -169,14 +169,16 @@
    }
 
    /* Custom Flickity styles */
-   .flickity-button {
-     background: #fff;
-     border: 1px solid #ddd;
-   }
+  .flickity-prev-next-button svg {
+    width: 12px;
+    height: 12px;
+    fill: #ffffff;
+  }
 
-   .flickity-button:hover {
-     background: #f0f0f0;
-   }
+  /* Remove default Flickity button outlines */
+  .flickity-prev-next-button:focus {
+    outline: none;
+  }
 
    .flickity-prev-next-button {
     background-color: rgba(0, 0, 0, 0.25); /* Semi-transparent background */
