@@ -22,9 +22,51 @@
 {% endcomment %}
 
 <style>
-  .secondaryImage{
-    color: #fff;
-  }
+  <style>
+    .product-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .quick-add {
+      position: absolute;
+      bottom: 20px; /* Position the button towards the bottom */
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    }
+
+    .product-card:hover .quick-add {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(-5px); /* Slight upward animation for hover */
+    }
+
+    .quick-add__submit {
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .quick-add__submit:hover {
+      background-color: #fff;
+      color: #000;
+      transform: scale(1.05);
+    }
+  </style>
 </style>
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
@@ -42,7 +84,7 @@
       assign ratio = 1
     endif
   -%}
-  <div class="card-wrapper product-card-wrapper ">
+  <div class="card-wrapper product-card-wrapper product-card ">
     <div
       class="
         card card--{{ settings.card_style }}
