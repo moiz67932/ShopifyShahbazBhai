@@ -185,3 +185,32 @@
     opacity: 1;
   }
 </style>
+
+{% schema %}
+{
+  "name": "Custom Product Card",
+  "settings": [
+    {
+      "type": "text",
+      "id":"header",
+      "label":"Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type":"product",
+      "name": "Product",
+      "settings": [{
+        "type": "product",
+        "id": "product",
+        "label": "Product"
+      }]
+    }
+  ],
+  "presets":[
+    {
+      "name": "Custom Product Card"
+    }
+  ]
+}
+{% endschema %}
