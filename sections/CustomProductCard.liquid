@@ -4,52 +4,7 @@
 
 <div class="container">
   <div class="productCard">
-    <div class="productImageWrapper">
-      {% render 'CustomCardProduct',
-        card_product: section.settings.product,
-        show_secondary_image: true,
-        show_price: true,
-        lazy_load: true,
-        show_quick_add: true
-      %}
-      <div class="productOverlay">
-        <div class="buttons">
-          <button class="quickView">Quick View</button>
-          <button class="quickShop">Quick Shop</button>
-        </div>
-        <div class="wishlistWrapper">
-          <i class="heartIcon">&#9825;</i>
-          <span class="wishlistText">Add to Wishlist</span>
-        </div>
-      </div>
-    </div>
-    <div class="productDetails">
-      <h3 class="productTitle">Flare Black Abaya</h3>
-      <p class="productPrice">Rs.13,828.16 PKR</p>
-    </div>
-  </div>
-
-  <div class="productCard">
-    {% render 'card-product',
-      card_product: section.settings.product,
-      show_secondary_image: true,
-      show_price: true,
-      lazy_load: true,
-      show_quick_add: true
-    %}
-  </div>
-
-  <div class="productCard">
     {% render 'CustomCardProduct2',
-      card_product: section.settings.product,
-      show_secondary_image: true,
-      show_price: true,
-      lazy_load: true,
-      show_quick_add: true
-    %}
-  </div>
-  <div class="productCard">
-    {% render 'CustomCardProduct',
       card_product: section.settings.product,
       show_secondary_image: true,
       show_price: true,
