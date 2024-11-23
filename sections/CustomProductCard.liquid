@@ -3,9 +3,8 @@
   <div class="container">
     {% for block in section.blocks %}
       <div class="productCard">
-        {%
-          render 'CustomCardProduct2',
-          card_product: {{ block.settings.product }},
+        {% render 'CustomCardProduct2',
+          card_product: section.settings.product,
           show_secondary_image: true,
           show_price: true,
           lazy_load: true,
