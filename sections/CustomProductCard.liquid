@@ -3,6 +3,7 @@
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 <div class="container">
+  <h2>{{ section.settings.heading }}</h2>
   {% for i in (1..4) %}
     <div class="productCard">
       {% render 'CustomCardProduct2',
@@ -105,10 +106,9 @@
   "name": "Custom Product Card",
   "settings": [
     {
-      "type":"product_list",
-      "id":"product_list",
-      "label":"Products",
-      "limit":12
+      "type": "text",
+      "id":"header",
+      "label":"Heading"
     },
     {
       "type":"product",
