@@ -435,7 +435,7 @@
         "a:hover {text-decoration: none;}"
       ],
       "settings": {
-        "title": "Trending Collection",
+        "title": "Best Selling",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -455,7 +455,7 @@
         "show_rating": false,
         "enable_quick_add": true,
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 12
       }
