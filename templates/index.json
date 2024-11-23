@@ -207,9 +207,7 @@
         "product_3LEWVe",
         "product_byqmM9"
       ],
-      "custom_css": [
-        ".product_price{color:pink; }"
-      ],
+      "custom_css": [],
       "settings": {
         "header": "Best Sellers"
       }
