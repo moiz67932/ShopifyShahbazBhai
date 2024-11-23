@@ -22,57 +22,61 @@
 {% endcomment %}
 
 <style>
-    <style>
-      .product-card {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      }
+      <style>
+        .product-card {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+        }
 
-      .quick-add {
-        position: absolute;
-        bottom: 0px; /* Position the button towards the bottom */
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-      }
+        .quick-add {
+          position: absolute;
+          bottom: 0px; /* Position the button towards the bottom */
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+        }
 
-      .product-card:hover .quick-add {
-        z-index:5;
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(-50%) translateY(-5px); /* Slight upward animation for hover */
-      }
+        .product-card:hover .quick-add {
+          z-index:5;
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(-5px); /* Slight upward animation for hover */
+        }
 
-      button {
-        padding: 5px 10px;
-        width:20px;
-        background-color: #000;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 12px;
-        font-weight: normal;
-        text-transform: uppercase;
-        transition: background-color 0.2s ease, transform 0.2s ease;
-      }
+        button {
+          padding: 5px 10px;
+          width:20px;
+          background-color: #000;
+          color: #fff;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 12px;
+          font-weight: normal;
+          text-transform: uppercase;
+          transition: background-color 0.2s ease, transform 0.2s ease;
+        }
 
-      .quick-add__submit:hover {
-        background-color: #fff;
-        color: #000;
-        transform: scale(1.05);
-      }
+        .quick-add__submit:hover {
+          background-color: #fff;
+          color: #000;
+          transform: scale(1.03);
+        }
 
-    .full-unstyled-link{
-    background-color:transparent;
+      .full-unstyled-link{
+      background-color:transparent;
+    }
+
+    .quick-add{
+    max-width:100px;
   }
-    </style>
+      </style>
 </style>
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
