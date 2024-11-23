@@ -82,18 +82,15 @@
    }
 
   .carousel {
-     width: calc(100% - 60px); /* Center carousel, leave some space on sides */
-     max-width: 1200px; /* Limit max width */
-     margin: 0 auto; /* Center the carousel */
-     padding: 0;
-     margin-top: 30px;
-   }
+    width: 100%; /* Full width, no padding */
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center the carousel */
+    margin-top: 30px;
+  }
 
-   /* Adjust carousel cell styles */
-   .carousel-cell {
-     width: 275px; /* Fixed width for all cells */
-     margin-right: 20px;
-   }
+  .carousel-cell {
+    width: 25%; /* Each cell takes up 25% to fit 4 per row */
+  }
 
    .productCard {
      position: relative;
