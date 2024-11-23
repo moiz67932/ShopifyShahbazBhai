@@ -38,6 +38,16 @@
       show_quick_add: true
     %}
   </div>
+
+  <div class="productCard">
+    {% render 'CustomCardProduct2',
+      card_product: section.settings.product,
+      show_secondary_image: true,
+      show_price: true,
+      lazy_load: true,
+      show_quick_add: true
+    %}
+  </div>
   <div class="productCard">
     {% render 'CustomCardProduct',
       card_product: section.settings.product,
