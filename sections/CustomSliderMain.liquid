@@ -31,28 +31,50 @@
             {% if block.settings.image != blank -%}
               {{-
                 block.settings.image
-                | image_url: width: 3840
-                | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: 'high'
+                | image_url: width: 1500
+                | image_tag:
+                  height: height,
+                  sizes: '(max-width: 1500px) 100vw, 1500px',
+                  widths: '375, 550, 750, 1100, 1500',
+                  fetchpriority: 'high',
+                  class: 'product-image',
+                  loading: 'eager'
               }}
             {% else %}
               {{
                 block.settings.product_set.featured_image
-                | image_url: width: 3840
-                | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: 'high'
+                | image_url: width: 1500
+                | image_tag:
+                  height: height,
+                  sizes: '(max-width: 1500px) 100vw, 1500px',
+                  widths: '375, 550, 750, 1100, 1500',
+                  fetchpriority: 'high',
+                  class: 'product-image',
+                  loading: 'eager'
               }}
             {% endif %}
           {%- else -%}
             {% if block.settings.image != blank -%}
               {{-
                 block.settings.image
-                | image_url: width: 3840
-                | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+                | image_url: width: 1500
+                | image_tag:
+                  loading: 'lazy',
+                  height: height,
+                  sizes: '(max-width: 1500px) 100vw, 1500px',
+                  widths: '375, 550, 750, 1100, 1500',
+                  class: 'product-image'
               }}
             {% else %}
               {{
                 block.settings.product_set.featured_image
-                | image_url: width: 3840
-                | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+                | image_url: width: 1500
+                | image_tag:
+                  loading: 'lazy',
+                  height: height,
+                  sizes: '(max-width: 1500px) 100vw, 1500px',
+                  widths: '375, 550, 750, 1100, 1500',
+                  class: 'product-image'
               }}
             {% endif %}
           {%- endif -%}
