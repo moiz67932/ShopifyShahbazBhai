@@ -179,12 +179,7 @@
         ".card__content {max-height: 80px;}"
       ],
       "settings": {
-        "product_list": [
-          "dummy-jacket",
-          "dummy-jacket-2",
-          "dummy-jacket-3",
-          "dummy-jacket-4"
-        ],
+        "header": "Best Sellers",
         "product": "dummy-jacket"
       }
     },
