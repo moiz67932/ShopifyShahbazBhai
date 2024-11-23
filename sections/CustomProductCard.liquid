@@ -17,22 +17,20 @@
   </div>
 </section>
 
-<!-- {{ 'flickityjs.js' | asset_url | script_tag }} -->
 <script src="{{ 'flickityjs.js' | asset_url }}" defer></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var elem = document.querySelector('.carousel');
     var flkty = new Flickity(elem, {
-      // options
       cellAlign: 'left',
       contain: true,
       pageDots: true,
       prevNextButtons: true,
       draggable: true,
-      groupCells: true,
       adaptiveHeight: false,
       wrapAround: true,
+      groupCells: 4, // Shows 4 cells at a time by default
       responsive: [
         {
           breakpoint: 768,
@@ -44,6 +42,12 @@
           breakpoint: 1024,
           settings: {
             groupCells: 2
+          }
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            groupCells: 3
           }
         },
         {
@@ -85,7 +89,6 @@
     padding: 0 15px;
   }
 
-  /* General Card Styling */
   .productCard {
     position: relative;
     width: 100%;
@@ -162,40 +165,6 @@
     max-height: 80px;
   }
 
-  /* Responsive Breakpoints */
-  @media screen and (max-width: 768px) {
-    /* Mobile - 1 product */
-    .container {
-      justify-content: center;
-    }
-    .productCard {
-      flex: 0 0 100%;
-      max-width: 275px;
-    }
-  }
-
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Tablet - 2 products */
-    .container {
-      justify-content: center;
-    }
-    .productCard {
-      flex: 0 0 calc(50% - 20px);
-      max-width: 275px;
-    }
-  }
-
-  @media screen and (min-width: 1025px) {
-    /* Desktop - 4 products */
-    .container {
-      justify-content: center;
-    }
-    .productCard {
-      flex: 0 0 calc(25% - 20px);
-      max-width: 275px;
-    }
-  }
-
   /* Flickity specific styles */
   .carousel {
     width: 100%;
@@ -206,7 +175,6 @@
     margin-right: 20px;
   }
 
-  /* Custom Flickity styles */
   .flickity-button {
     background: #fff;
     border: 1px solid #ddd;
