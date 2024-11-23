@@ -3,16 +3,21 @@
 
 <div class="carousel carousel--crossbox">
   <div class="slider" id="slider-{{ section.id }}">
-    <ul
+    <div
       id="carousel-{{ section.id }}"
       class="slider__grid--{{ section.id }} carousel--flickity-init"
-      role="carousel"
-      {% if section.settings.is_slider %}
-        data-flickity='
-          { "pageDots": false, "fullscreen": true, "draggable": true
-          }
-        '
-      {% endif %}
+      data-flickity='
+        {
+          "cellAlign": "center",
+          "contain": true,
+          "wrapAround": true,
+          "pageDots": false,
+          "prevNextButtons": true,
+          "draggable": true,
+          "fade": true,
+          "adaptiveHeight": false
+        }
+      '
     >
       {% for block in section.blocks %}
         <div class="carousel--cell-container" style="background: {{ block.settings.background }}">
@@ -27,58 +32,61 @@
               assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
             endif
           -%}
-          {%- if forloop.first %}
-            {% if block.settings.image != blank -%}
-              {{-
-                block.settings.image
-                | image_url: width: 1500
-                | image_tag:
-                  height: height,
-                  sizes: '(max-width: 1500px) 100vw, 1500px',
-                  widths: '375, 550, 750, 1100, 1500',
-                  fetchpriority: 'high',
-                  class: 'product-image',
-                  loading: 'eager'
-              }}
-            {% else %}
-              {{
-                block.settings.product_set.featured_image
-                | image_url: width: 1500
-                | image_tag:
-                  height: height,
-                  sizes: '(max-width: 1500px) 100vw, 1500px',
-                  widths: '375, 550, 750, 1100, 1500',
-                  fetchpriority: 'high',
-                  class: 'product-image',
-                  loading: 'eager'
-              }}
-            {% endif %}
-          {%- else -%}
-            {% if block.settings.image != blank -%}
-              {{-
-                block.settings.image
-                | image_url: width: 1500
-                | image_tag:
-                  loading: 'lazy',
-                  height: height,
-                  sizes: '(max-width: 1500px) 100vw, 1500px',
-                  widths: '375, 550, 750, 1100, 1500',
-                  class: 'product-image'
-              }}
-            {% else %}
-              {{
-                block.settings.product_set.featured_image
-                | image_url: width: 1500
-                | image_tag:
-                  loading: 'lazy',
-                  height: height,
-                  sizes: '(max-width: 1500px) 100vw, 1500px',
-                  widths: '375, 550, 750, 1100, 1500',
-                  class: 'product-image'
-              }}
-            {% endif %}
-          {%- endif -%}
-          <div class="text-container">
+          <div class="image-wrapper">
+            {%- if forloop.first %}
+              {% if block.settings.image != blank -%}
+                {{-
+                  block.settings.image
+                  | image_url: width: 1500
+                  | image_tag:
+                    height: height,
+                    sizes: '(max-width: 1500px) 100vw, 1500px',
+                    widths: '375, 550, 750, 1100, 1500',
+                    fetchpriority: 'high',
+                    class: 'product-image animate-image',
+                    loading: 'eager'
+                }}
+              {% else %}
+                {{
+                  block.settings.product_set.featured_image
+                  | image_url: width: 1500
+                  | image_tag:
+                    height: height,
+                    sizes: '(max-width: 1500px) 100vw, 1500px',
+                    widths: '375, 550, 750, 1100, 1500',
+                    fetchpriority: 'high',
+                    class: 'product-image animate-image',
+                    loading: 'eager'
+                }}
+              {% endif %}
+            {%- else -%}
+              {% if block.settings.image != blank -%}
+                {{-
+                  block.settings.image
+                  | image_url: width: 1500
+                  | image_tag:
+                    loading: 'lazy',
+                    height: height,
+                    sizes: '(max-width: 1500px) 100vw, 1500px',
+                    widths: '375, 550, 750, 1100, 1500',
+                    class: 'product-image animate-image'
+                }}
+              {% else %}
+                {{
+                  block.settings.product_set.featured_image
+                  | image_url: width: 1500
+                  | image_tag:
+                    loading: 'lazy',
+                    height: height,
+                    sizes: '(max-width: 1500px) 100vw, 1500px',
+                    widths: '375, 550, 750, 1100, 1500',
+                    class: 'product-image animate-image'
+                }}
+              {% endif %}
+            {%- endif -%}
+          </div>
+
+          <div class="text-container" style="font-size: {{ section.settings.font_size }}px;">
             <div class="text-fill">
               {% if block.settings.product_title != blank %}
                 {{ block.settings.product_title }}
@@ -94,6 +102,7 @@
               {% endif %}
             </div>
           </div>
+
           <div class="product-info-container">
             {% if block.settings.show_price %}
               <h3 class="price--heading">{{ block.settings.product_set.price | money }}</h3>
@@ -104,415 +113,300 @@
               </p>
             {% endif %}
           </div>
+
           {% if block.settings.button_text != blank %}
             <div class="shop-now-container">
-              <a
-                class="shop-now-btn"
-                href="{{block.settings.product_set.url}}  "
-              >
+              <a class="shop-now-btn" href="{{ block.settings.product_set.url }}">
                 {{- block.settings.button_text -}}
               </a>
             </div>
           {% endif %}
         </div>
       {% endfor %}
-    </ul>
+    </div>
   </div>
 </div>
 
 <style>
-        .carousel--flickity-init {
-          position: relative;
-          height: 100vh;
-          padding: 0;
-        }
-        .carousel--flickity-init .flickity-slider {
-          display: flex;
-          align-items: center;
-        }
+  .carousel--crossbox {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
 
-        .carousel--flickity-init .flickity-viewport {
-          height: 100vh !important;
-        }
-        .carousel--cell-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100%;
-          width: 100%;
-        }
-        .carousel--cell-container img {
-          width: 100%;
-          height: auto;
-          max-width: 610px;
-          {% if section.settings.keep_animation %}
-          animation: moveUpDown 4s linear infinite;
-          transition: transform 0.5s ease; /* Smooth out adjustments */
-          transform: translateX(var(--translateX)); /* Use the CSS variable */
-          {% endif %}
-        }
+  .carousel--flickity-init {
+    height: 100vh;
+    background: transparent;
+  }
 
-        @keyframes moveUpDown {
-          0%,
-          100% {
-            transform: translateY(10px) translateX(var(--translateX));
-          }
-          50% {
-            transform: translateY(-10px) translateX(var(--translateX));
-          }
-        }
+  .carousel--cell-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
 
-        .text-container {
-          position: absolute;
-          font-size: {{section.settings.font_size}}px;
-          font-weight: bold;
-          text-align: center;
-          min-height: -webkit-fill-available;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 100%;
-          max-width: 1000px;
-          line-height: 100%;
-        }
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-        .text-fill,
-        .text-stroke {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: fit-content;
-                }
+  .product-image {
+    width: auto;
+    height: auto;
+    max-width: 610px;
+    max-height: 80vh;
+    object-fit: contain;
+  }
 
-        .text-fill {
-          color: transparent;
-          background: linear-gradient(
-            to right,
-            hsla(0, 0%, 100%, 1) 0%,
-            hsla(0, 0%, 100%, 1) 30%,
-            /* Color starts and instantly transitions at 30% */ transparent 30%,
-            /* Instant transition to transparency */ transparent 70%,
-            /* Transparent stays until 70% */ hsla(0, 0%, 100%, 1) 70% /* Instant transition back to color */
-          );
-          -webkit-background-clip: text;
-          background-clip: text;
-        }
+  .animate-image {
+    transition: transform 0.3s ease-out;
+  }
 
-        .text-stroke {
-          -webkit-text-stroke: 1px #fff; /* Adjust stroke width as needed */
-          color: transparent; /* Hide the fill color */
-          z-index: -1; /* Ensure the stroke text is below the fill text */
-        }
+  .text-container {
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1000px;
+    line-height: 100%;
+    z-index: 2;
+  }
 
-        .shop-now-btn {
-          font-size: 24px;
-          font-weight: 600;
-          color: rgb(255, 255, 255);
-          text-transform: uppercase;
-          text-decoration: none;
-          letter-spacing: 3px;
-          line-height: 60px;
-          text-align: left;
-          white-space: normal;
-          overflow: visible;
-          margin: 0px;
-          padding: 0px;
-          width: auto;
-          height: auto;
-          /* float: none; */
-          /* clear: none; */
-          /* border-style: solid; */
-          z-index: 7;
-          position: relative;
-          vertical-align: inherit;
-          transform-origin: 50% 50%;
-          transform: translate3d(0px, 0px, 0px);
-          display: inline-block;
-          background: rgba(0, 0, 0, 0);
-          visibility: inherit;
-          opacity: 1;
-          border-color: rgba(255, 255, 255, 0.35);
-          border-bottom: 1px solid;
-        }
+  .text-fill,
+  .text-stroke {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
 
-        .product-info-container {
-          position: absolute;
-          bottom: 5%;
-          left: 25%;
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-        }
+  .text-fill {
+    color: transparent;
+    background: linear-gradient(
+      to right,
+      hsla(0, 0%, 100%, 1) 0%,
+      hsla(0, 0%, 100%, 1) 30%,
+      transparent 30%,
+      transparent 70%,
+      hsla(0, 0%, 100%, 1) 70%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 
-        .price--heading {
-          font-size: 35px;
-          font-weight: 600;
-          color: rgb(255, 255, 255);
-          text-transform: none;
-          text-decoration: none;
-          letter-spacing: 0px;
-          line-height: 35px;
-          text-align: left;
-          white-space: normal;
-          overflow: visible;
-          margin: 0px;
-          padding: 0px;
-          width: auto;
-          height: auto;
-          float: none;
-          clear: none;
-          z-index: 9;
-          position: relative;
-          vertical-align: inherit;
-          transform-origin: 50% 50%;
-          transform: translate(0px, 0px);
-          display: block;
-          background: transparent;
-          visibility: inherit;
-          opacity: 1;
-          pointer-events: auto;
-        }
+  .text-stroke {
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    z-index: -1;
+  }
 
-        .product--info {
-          font-size: 16px;
-          font-weight: 400;
-          color: rgba(255, 255, 255, 0.7);
-          text-transform: none;
-          text-decoration: none;
-          letter-spacing: 0px;
-          line-height: 30px;
-          text-align: left;
-          white-space: normal;
-          overflow: visible;
-          margin: 0px;
-          padding: 0px 83px 0px 0px;
-          width: auto;
-          height: auto;
-          float: none;
-          clear: none;
-          z-index: 7;
-          position: relative;
-          vertical-align: inherit;
-          transform-origin: 50% 50%;
-          transform: translate(0px, 0px);
-          display: block;
-          background: transparent;
-          visibility: inherit;
-          opacity: 1;
-          pointer-events: auto;
-          max-width: 500px;
-        }
+  .product-info-container {
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+  }
 
-        .shop-now-container {
-          position: absolute;
-          bottom: 5%;
-          right: 25%;
-        }
+  .price--heading {
+    font-size: 35px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0px;
+    line-height: 35px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
 
-        .carousel--crossbox {
-          overflow-y: scroll;
-        }
+  .product--info {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0px;
+    line-height: 30px;
+    text-align: left;
+    margin: 0;
+    padding: 0 83px 0 0;
+    max-width: 500px;
+  }
 
-        .flickity-prev-next-button .flickity-button-icon {
-          fill: white;
-          max-width: 40px;
-          position: relative;
-          fill: white;
-          max-width: 40px;
-          position: relative;
-          top: auto;
-          left: auto;
-        }
+  .shop-now-container {
+    position: absolute;
+    bottom: 5%;
+    right: 25%;
+    z-index: 2;
+  }
 
-        .flickity-button:disabled {
-          display: none;
-        }
+  .shop-now-btn {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3px;
+    line-height: 60px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    transition: border-color 0.3s ease;
+  }
 
-        .flickity-prev-next-button {
-          background: transparent;
-          border: 1px solid #fff;
-          width: min(10vw, 300px);
-          height: min(10vw, 300px);
-        }
+  .shop-now-btn:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+  }
 
-        .flickity-prev-next-button:hover {
-          background: transparent;
-        }
+  /* Flickity Navigation Styles */
+  .flickity-button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
 
-        @media only screen and (max-width: 1500px){
-          .text-container {
-            font-size: min(10vw , 130px);
-        }
-        .shop-now-btn{
-          font-size: 19px;
-          line-height: 37px;
-          line-height: 24px;
-          text-align: center;
-          overflow: visible;
-          padding: 0px;
-          width: fit-content;
-          height: auto;
-          float: none;
-          clear: none;
-          z-index: 7;
-          position: relative;
-          vertical-align: bottom;
-          transform-origin: 50% 50%;
-          transform: translate(0px, 0px);
-          /* display: block; */
-          background: transparent;
-          visibility: inherit;
-          opacity: 1;
-          pointer-events: auto;
-          MIN-WIDTH: FIT-CONTENT;
-          border-color: rgba(255, 255, 255, 0.35);
-          border-bottom: 1px solid;
-        }
+  .flickity-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
 
-      .shop-now-container{
-        position: absolute;
-        bottom: 15px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        min-width: fit-content;
-        text-align: center;
-      }
+  .flickity-button-icon {
+    fill: #fff;
+  }
 
-      .product-info-container{
-        position: absolute;
-        bottom: 0%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-        align-items: center;
-      }
+  .flickity-prev-next-button.previous {
+    left: 30px;
+  }
 
-      .product--info{
-        font-size: 13px;
-        font-weight: 400;
-        color: rgba(255, 255, 255, 0.7);
-        text-transform: none;
-        text-decoration: none;
-        letter-spacing: 0px;
-        line-height: 23px;
-        text-align: center;
-        white-space: normal;
-        overflow: visible;
-        margin: 9px 0px 14px;
-        padding: 0px;
-        width: auto;
-        height: auto;
-        float: none;
-        clear: none;
-        z-index: 7;
-        position: relative;
-        vertical-align: inherit;
-        transform-origin: 50% 50%;
-        transform: translate(0px, 0px);
-        display: block;
-        background: transparent;
-        visibility: inherit;
-        opacity: 1;
-        pointer-events: auto;
-      }
+  .flickity-prev-next-button.next {
+    right: 30px;
+  }
 
-      .price--heading{
-        font-size: 23px;
-        font-weight: 600;
-        color: rgb(255, 255, 255);
-        text-transform: none;
-        text-decoration: none;
-        letter-spacing: 0px;
-        line-height: 28px;
-        text-align: center;
-        white-space: normal;
-        overflow: visible;
-        margin: 0px;
-        padding: 0px;
-        width: auto;
-        height: auto;
-        float: none;
-        clear: none;
-        z-index: 9;
-        position: relative;
-        vertical-align: inherit;
-        transform-origin: 50% 50%;
-        transform: translate(0px, 0px);
-        display: block;
-        background: transparent;
-        visibility: inherit;
-        opacity: 1;
-        pointer-events: auto;
-      }
-      .carousel--cell-container img{
-        max-width: 420px;
+  .flickity-button:disabled {
+    display: none;
+  }
+
+  /* Responsive Styles */
+  @media only screen and (max-width: 1500px) {
+    .text-container {
+      font-size: min(10vw, 130px);
     }
 
-    .flickity-prev-next-button .flickity-button-icon{
-      max-width: 20px;
+    .shop-now-btn {
+      font-size: 19px;
+      line-height: 37px;
+      text-align: center;
+      min-width: fit-content;
+    }
 
+    .shop-now-container {
+      bottom: 15px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      min-width: fit-content;
+      text-align: center;
+      right: auto;
+    }
+
+    .product-info-container {
+      bottom: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 300px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product--info {
+      font-size: 13px;
+      line-height: 23px;
+      text-align: center;
+      margin: 9px 0px 14px;
+      padding: 0;
+    }
+
+    .price--heading {
+      font-size: 23px;
+      line-height: 28px;
+      text-align: center;
+    }
+
+    .product-image {
+      max-width: 420px;
+    }
+
+    .flickity-prev-next-button {
+      width: 40px;
+      height: 40px;
+    }
+
+    .flickity-button-icon {
+      max-width: 20px;
     }
   }
 </style>
 
-{% if section.settings.keep_animation %}
-  <script>
-    // Select all carousel cell container images
-    const imgs = document.querySelectorAll('.carousel--cell-container img');
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize Flickity
+  const slider = document.querySelector('.carousel--flickity-init');
+  const flkty = new Flickity(slider);
 
-    // Store current and target positions for each image
-    const positions = Array.from(imgs).map(() => ({
-      currentTranslateX: 0,
-      targetTranslateX: 0,
-    }));
-
-    // Function to update position for each image
-    function updatePosition() {
-      imgs.forEach((img, index) => {
-        if (!img) return;
-
-        // Access the current and target positions for this image
-        let { currentTranslateX, targetTranslateX } = positions[index];
-        const dx = targetTranslateX - currentTranslateX;
-
-        // Adjust speed differently based on the direction of the movement
-        // Increase speed a bit when moving left to right (dx > 0)
-        const speedAdjustmentFactor = dx > 0 ? 0.003 : 0.002;
-        currentTranslateX += dx * speedAdjustmentFactor;
-
-        // Update the position in the positions array
-        positions[index].currentTranslateX = currentTranslateX;
-
-        // Update the CSS variable for horizontal translation
-        img.style.setProperty('--translateX', `${currentTranslateX}px`);
+  // Image hover animation
+  if ({{ section.settings.keep_animation }}) {
+    const images = document.querySelectorAll('.animate-image');
+    let rafId = null;
+    
+    function handleMouseMove(e) {
+      cancelAnimationFrame(rafId);
+      
+      rafId = requestAnimationFrame(() => {
+        images.forEach(img => {
+          const rect = img.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+          
+          const deltaX = (e.clientX - centerX) / 20;
+          const deltaY = (e.clientY - centerY) / 20;
+          
+          img.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        });
       });
-
-      requestAnimationFrame(updatePosition);
     }
 
-    // Initialize the continuous update for all images
-    requestAnimationFrame(updatePosition);
-
-    // Event listener for mouse movement
-    document.addEventListener('mousemove', (e) => {
-      imgs.forEach((img, index) => {
-        if (!img) return;
-
-        const rect = img.getBoundingClientRect();
-        // Adjust limits as needed and calculate the desired target position based on mouse location
-        positions[index].targetTranslateX = Math.min(Math.max(e.clientX - rect.left - rect.width / 2, -50), 50);
+    function handleMouseLeave() {
+      cancelAnimationFrame(rafId);
+      
+      images.forEach(img => {
+        img.style.transform = 'translate(0, 0)';
       });
-    });
-  </script>
-{% endif %}
+    }
+
+    slider.addEventListener('mousemove', handleMouseMove);
+    slider.addEventListener('mouseleave', handleMouseLeave);
+  }
+});
+</script>
 
 {% schema %}
 {
