@@ -1,4 +1,4 @@
-{{ 'flickitycss.css' | asset_url | stylesheet_tag }}
+{{ 'flickity.css' | asset_url | stylesheet_tag }}
 
 <section class="section">
   <h2 class="heading">{{ section.settings.header }}</h2>
@@ -17,7 +17,7 @@
   </div>
 </section>
 
-<script src="{{ 'flickityjs.js' | asset_url }}" defer></script>
+<script src="{{ 'flickity.pkgd.js' | asset_url }}" defer></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
