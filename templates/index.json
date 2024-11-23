@@ -102,11 +102,11 @@
         "product_d9eKFt"
       ],
       "custom_css": [
-        "h3{font-size:10px;}"
+        "h3 {font-size: 10px;}"
       ],
       "settings": {
         "is_slider": true,
-        "keep_animation": true,
+        "keep_animation": false,
         "font_size": 160
       }
     },
