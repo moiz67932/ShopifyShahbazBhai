@@ -19,102 +19,101 @@
   .heading {
     border: 1px solid #808080; /* Border around the text */
     border-radius: 10px;       /* Rounded corners */
-    padding: 5px 10px;         /* Space inside the border */
-    display: inline-block;     /* Border only wraps around the text */
-    text-align: center;        /* Center the text (optional for aesthetics) */
+    padding: 5px 10px;         /* Space between the text and the border */
+    display: inline-block;     /* Makes the border as wide as the text */
+    margin: 0 auto;            /* Center-aligns the heading */
   }
 
-
-        .section{
-          display:flex;
-          flex-direction:column;
-          text-align: center;
-          justify-content:center;
-        }
-        .container{
-          display:flex;
-          flex-direction:row;
-          justify-content:center;
-          gap:20px;
-              margin: 15px;
-        }
-        /* General Card Styling */
-        .productCard {
-          position: relative;
-          width: 275px;
-
-        }
-
-        .productOverlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          background-color: rgba(0, 0, 0, 0.6);
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
-
-        .productImageWrapper:hover .productOverlay {
-          opacity: 1;
-        }
-
-        .wishlistWrapper {
-          position: absolute;
-          top: 10px;
-          left: 10px;
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          font-size: 14px;
-          color: #fff;
-          cursor: pointer;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
-
-        .heartIcon {
-          font-size: 20px;
-        }
-
-        .productImageWrapper:hover .wishlistWrapper {
-          opacity: 1;
-        }
-
-        .wishlistText {
-          display: none;
-        }
-
-        .wishlistWrapper:hover .wishlistText {
-          display: inline;
-        }
-
-        .productDetails {
-          padding: 15px;
-          text-align: center;
-        }
-
-        .productTitle {
-          font-size: 16px;
-          font-weight: bold;
-          margin: 0 0 5px;
-        }
-
-        .productPrice {
-          font-size: 14px;
-          color: #666;
-          margin: 0;
-        }
-        .card__content {
-        max-height: 80px;
-      }
+          .section{
+            display:flex;
+            flex-direction:column;
+            text-align: center;
+            justify-content:center;
+          }
+          .container{
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            gap:20px;
+                margin: 15px;
+          }
+          /* General Card Styling */
+          .productCard {
+            position: relative;
+            width: 275px;
 
           }
+
+          .productOverlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+
+          .productImageWrapper:hover .productOverlay {
+            opacity: 1;
+          }
+
+          .wishlistWrapper {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+
+          .heartIcon {
+            font-size: 20px;
+          }
+
+          .productImageWrapper:hover .wishlistWrapper {
+            opacity: 1;
+          }
+
+          .wishlistText {
+            display: none;
+          }
+
+          .wishlistWrapper:hover .wishlistText {
+            display: inline;
+          }
+
+          .productDetails {
+            padding: 15px;
+            text-align: center;
+          }
+
+          .productTitle {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 0 5px;
+          }
+
+          .productPrice {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+          }
+          .card__content {
+          max-height: 80px;
+        }
+
+            }
 </style>
 
 {% schema %}
