@@ -9,21 +9,6 @@
  */
 {
   "sections": {
-    "custom_product_card_QPTYac": {
-      "type": "CustomProductCard",
-      "custom_css": [
-        ".card__content {max-height: 80px;}"
-      ],
-      "settings": {
-        "product_list": [
-          "dummy-jacket",
-          "dummy-jacket-2",
-          "dummy-jacket-3",
-          "dummy-jacket-4"
-        ],
-        "product": "dummy-jacket"
-      }
-    },
     "slideshow_NYqgwN": {
       "type": "slideshow",
       "blocks": {
@@ -186,6 +171,21 @@
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "custom_product_card_QPTYac": {
+      "type": "CustomProductCard",
+      "custom_css": [
+        ".card__content {max-height: 80px;}"
+      ],
+      "settings": {
+        "product_list": [
+          "dummy-jacket",
+          "dummy-jacket-2",
+          "dummy-jacket-3",
+          "dummy-jacket-4"
+        ],
+        "product": "dummy-jacket"
       }
     },
     "collage_J6FfcA": {
@@ -602,11 +602,11 @@
     }
   },
   "order": [
-    "custom_product_card_QPTYac",
     "slideshow_NYqgwN",
     "rich_text_CjbypF",
     "custom_collection_grid1_moiz_bRJWEz",
     "collage_cdnE3P",
+    "custom_product_card_QPTYac",
     "collage_J6FfcA",
     "collection_list_Hhb4p7",
     "image_with_text_7zai4y",
