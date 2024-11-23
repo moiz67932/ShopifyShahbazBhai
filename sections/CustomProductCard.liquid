@@ -28,33 +28,6 @@
 
   }
 
-  .productImageWrapper {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .productImage {
-    width: 100%;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-
-  .secondaryImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transform: scale(1.2);
-  }
-
-  .productImageWrapper:hover .secondaryImage {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  .productImageWrapper:hover .primaryImage {
-    opacity: 0;
-  }
-
   .productOverlay {
     position: absolute;
     top: 0;
@@ -72,31 +45,6 @@
 
   .productImageWrapper:hover .productOverlay {
     opacity: 1;
-  }
-
-  .buttons {
-    display: flex;
-    gap: 10px;
-  }
-
-  .quickView,
-  .quickShop {
-    padding: 8px 15px;
-    background-color: #fff;
-    color: #000;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-  }
-
-  .quickView:hover,
-  .quickShop:hover {
-    background-color: #000;
-    color: #fff;
-    transform: scale(1.05);
   }
 
   .wishlistWrapper {
