@@ -1,11 +1,10 @@
 
-
-.card--card .quick-add {
-  margin: 0 1.3rem 1rem;
-}
-
 .quick-add {
-    padding: 8px 15px;
+  position: relative;
+  grid-row-start: 4;
+  margin: 0 0 1rem;
+  z-index: 1;
+      padding: 8px 15px;
     background-color: #fff;
     color: #000;
     border: none;
@@ -14,7 +13,11 @@
     font-weight: bold;
     border-radius: 5px;
     transition: transform 0.2s ease, background-color 0.2s ease;
-  }
+}
+
+.card--card .quick-add {
+  margin: 0 1.3rem 1rem;
+}
 
 .quick-add:hover {
     background-color: #000;
