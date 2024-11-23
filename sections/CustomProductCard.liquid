@@ -113,7 +113,26 @@
       max-height: 80px;
     }
 
-        }
+        @media (max-width: 768px) {
+    /* Small devices (mobile) */
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* Medium devices (tablet) */
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    /* Large devices and above (desktop) */
+    .container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 </style>
 
 {% schema %}
