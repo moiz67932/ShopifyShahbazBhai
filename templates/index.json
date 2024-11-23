@@ -175,6 +175,38 @@
     },
     "custom_product_card_QPTYac": {
       "type": "CustomProductCard",
+      "blocks": {
+        "product_3QpLry": {
+          "type": "product",
+          "settings": {
+            "product": "dummy-jacket"
+          }
+        },
+        "product_wUqhzd": {
+          "type": "product",
+          "settings": {
+            "product": "dummy-jacket-2"
+          }
+        },
+        "product_EnYcch": {
+          "type": "product",
+          "settings": {
+            "product": "dummy-jacket-3"
+          }
+        },
+        "product_3LEWVe": {
+          "type": "product",
+          "settings": {
+            "product": "dummy-jacket-4"
+          }
+        }
+      },
+      "block_order": [
+        "product_3QpLry",
+        "product_wUqhzd",
+        "product_EnYcch",
+        "product_3LEWVe"
+      ],
       "custom_css": [],
       "settings": {
         "header": "Best Sellers",
