@@ -83,29 +83,16 @@
             "button_text": "Shop Now",
             "background": "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,17,126,1) 19%, rgba(78,9,121,1) 47%, rgba(61,54,151,1) 93%, rgba(106,26,210,1) 100%);"
           }
-        },
-        "product_d9eKFt": {
-          "type": "product",
-          "settings": {
-            "product_set": "dummy-jacket-2",
-            "image": "shopify://shop_images/image_2024-11-24_001146080-removebg-preview.png",
-            "product_title": "Love You Hogya",
-            "show_price": true,
-            "product_description": "<p>A CrossBox Digital LTD. creation</p>",
-            "button_text": "Shop Now",
-            "background": "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,17,126,1) 19%, rgba(78,9,121,1) 47%, rgba(61,54,151,1) 93%, rgba(106,26,210,1) 100%);"
-          }
         }
       },
       "block_order": [
-        "product_Haz6yc",
-        "product_d9eKFt"
+        "product_Haz6yc"
       ],
       "custom_css": [
         "h3 {font-size: 10px;}"
       ],
       "settings": {
-        "is_slider": true,
+        "is_slider": false,
         "keep_animation": false,
         "font_size": 160
       }
