@@ -86,6 +86,14 @@
     .card__content {
     max-height: 80px;
   }
+
+  .card__heading{
+    font-weight:normal;
+    font-size:14px;
+  }
+  .product_price{
+
+  }
         </style>
 </style>
 
@@ -230,7 +238,7 @@
           <div class="card-information">
             {% comment %} Custom For Price {% endcomment %}
             {%- if show_price -%}
-              <span class="visually-hidden">{{ 'accessibility.price' | t }}</span>
+              <span class="visually-hidden product_price">{{ 'accessibility.price' | t }}</span>
               <div class="caption-with-letter-spacing light product__price">{{ card_product.price | money }}</div>
             {%- endif -%}
 
