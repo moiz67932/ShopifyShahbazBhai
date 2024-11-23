@@ -17,7 +17,8 @@
   </div>
 </section>
 
-{{ 'flickityjs.js' | asset_url | script_tag }}
+<!-- {{ 'flickityjs.js' | asset_url | script_tag }} -->
+<script src="{{ 'flickityjs.js' | asset_url }}" defer></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
