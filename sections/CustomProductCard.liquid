@@ -1,21 +1,22 @@
 {{ 'quick-add.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-
-<div class="container">
+<section>
   <h2>{{ section.settings.header }}</h2>
-  {% for i in (1..4) %}
-    <div class="productCard">
-      {% render 'CustomCardProduct2',
-        card_product: section.settings.product,
-        show_secondary_image: true,
-        show_price: true,
-        lazy_load: true,
-        show_quick_add: true
-      %}
-    </div>
-  {% endfor %}
-</div>
+  <div class="container">
+    {% for i in (1..4) %}
+      <div class="productCard">
+        {% render 'CustomCardProduct2',
+          card_product: section.settings.product,
+          show_secondary_image: true,
+          show_price: true,
+          lazy_load: true,
+          show_quick_add: true
+        %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
 
 <style>
   .container{
