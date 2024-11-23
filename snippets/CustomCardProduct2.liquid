@@ -86,9 +86,6 @@
       .card__content {
       height: 80px;
     }
-  .spinner-style{
-    transform: translateX(0%)
-  }
   </style>
 </style>
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
@@ -299,7 +296,7 @@
                 >
                   Quick Add
 
-                  {%- render 'loading-spinner', class: 'spinner-style' -%}
+                  {%- render 'loading-spinner' -%}
                 </button>
               </modal-opener>
               <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal">
