@@ -87,7 +87,7 @@
       height: 80px;
     }
 
-  .card-information{
+  .product__price{
     margin:20px;
     font-size:30px;
     color:pink;
@@ -239,8 +239,8 @@
               <span class="visually-hidden ">
                 {{ 'accessibility.price' | t }}
               </span>
-              <div class="caption-with-letter-spacing light product__price product_price">
-                <p>{{ card_product.price | money }}</p>
+              <div class="caption-with-letter-spacing light">
+                <p class="product__price">{{ card_product.price | money }}</p>
               </div>
             {%- endif -%}
 
