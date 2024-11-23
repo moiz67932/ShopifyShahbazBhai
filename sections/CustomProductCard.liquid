@@ -1,10 +1,11 @@
 <section class="section">
   <h2>{{ section.settings.header }}</h2>
   <div class="container">
-    {% for product in section.blocks %}
+    {% for block in section.blocks %}
       <div class="productCard">
-        {% render 'CustomCardProduct2',
-          card_product: section.settings.product,
+        {%
+          render 'CustomCardProduct2',
+          card_product: {{ block.settings.product }},
           show_secondary_image: true,
           show_price: true,
           lazy_load: true,
