@@ -512,7 +512,7 @@
         ".collection {justify-content: center;}",
         ".product-grid {gap: ;}",
         ".grid__item {display: flex; width: 350px; justify-content: center;}",
-        ".card__inner {height: 300px;}",
+        ".card__inner {width: 200px; /* Set the desired width */ height: 270px; /* Set the desired height */ object-fit: cover;}",
         "h3 {text-transform: uppercase;}",
         "a {color: black; font-size: 16px; text-decoration: none;}",
         "a:hover {text-decoration: none;}"
