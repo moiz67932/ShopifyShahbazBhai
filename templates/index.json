@@ -513,7 +513,7 @@
         ".product-grid {gap: ;}",
         ".grid__item {display: flex; width: 350px; justify-content: center;}",
         ".card__inner {height: 250px;}",
-        "img {height: 250px; width: 250px; object-fit: contain;}",
+        "}img {height: 250px; width: 250px; object-fit: contain;}",
         "h3 {text-transform: uppercase;}",
         "a {color: black; font-size: 16px; text-decoration: none;}",
         "a:hover {text-decoration: none;}"
