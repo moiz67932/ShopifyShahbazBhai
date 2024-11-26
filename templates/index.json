@@ -511,8 +511,8 @@
         ".card-wrapper {height: 350px; width: 250px; align-items: center;}",
         ".collection {justify-content: center;}",
         ".product-grid {gap: ;}",
-        ".grid__item {display: flex; width: 375px; justify-content: center;}",
-        ".card__inner {height: 250px;}",
+        ".grid__item {display: flex; width: 350px; justify-content: center;}",
+        ".card__inner {height: 300px;}",
         "h3 {text-transform: uppercase;}",
         "a {color: black; font-size: 16px; text-decoration: none;}",
         "a:hover {text-decoration: none;}"
