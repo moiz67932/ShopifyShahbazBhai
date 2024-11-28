@@ -3,17 +3,19 @@
 <section class="section">
   <h2 class="heading">{{ section.settings.header }}</h2>
   <div class="carousel">
-    {% for block in section.blocks %}
-      <div class="productCard carousel-cell">
-        {% render 'CustomCardProduct2',
-          card_product: block.settings.product,
-          show_secondary_image: true,
-          show_price: true,
-          lazy_load: true,
-          show_quick_add: true
-        %}
-      </div>
-    {% endfor %}
+    <!--
+      {% for block in section.blocks %}
+        <div class="productCard carousel-cell">
+          {% render 'CustomCardProduct2',
+            card_product: block.settings.product,
+            show_secondary_image: true,
+            show_price: true,
+            lazy_load: true,
+            show_quick_add: true
+          %}
+        </div>
+      {% endfor %}
+    -->
   </div>
 </section>
 
