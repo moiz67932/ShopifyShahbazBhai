@@ -73,41 +73,83 @@
   "settings": [],
   "blocks": [
     {
-      "type": "image",
-      "name":"Image",
+      "type": "main_text",
+      "name": "Main Text",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "banner_image",
-          "label": "Banner Image"
-        },
+          "type": "text",
+          "id": "main_text",
+          "label": "Main Text"
+        }
+      ]
+    },
+    {
+      "type": "sub_text",
+      "name": "Sub Text",
+      "settings": [
         {
-        "type": "text",
-        "id":"heading_text",
-        "label":"Main Text"
-      },
+          "type": "text",
+          "id": "sub_text",
+          "label": "Sub Text"
+        }
+      ]
+    },
+    {
+      "type": "primary_button",
+      "name": "Primary Button",
+      "settings": [
         {
-        "type": "text",
-        "id":"sub_text",
-        "label":"Sub Text"
-      },
-       {
-        "type": "text",
-        "id":"primary_button_text",
-        "label":"Primary Button"
-      },
+          "type": "text",
+          "id": "primary_button_text",
+          "label": "Primary Button Text"
+        }
+      ]
+    },
+    {
+      "type": "secondary_button",
+      "name": "Secondary Button",
+      "settings": [
         {
-        "type": "text",
-        "id":"secondary_button_text",
-        "label":"Secondary Button"
-      }
+          "type": "text",
+          "id": "secondary_button_text",
+          "label": "Secondary Button Text"
+        }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Custom Banner"
+      "name": "Custom Banner",
+      "category": "Banner"
     }
   ]
 }
 {% endschema %}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const mainText = document.querySelector(".main-text");
+    const subText = document.querySelector(".sub-text");
+    const primaryButton = document.querySelector(".primary-button");
+    const secondaryButton = document.querySelector(".secondary-button");
+
+    // Control button visibility
+    const primaryText = "{{ settings.primary_button_text }}";
+    const secondaryText = "{{ settings.secondary_button_text }}";
+
+    if (primaryText) {
+      primaryButton.textContent = primaryText;
+      primaryButton.setAttribute("data-visible", "true");
+    }
+    if (secondaryText) {
+      secondaryButton.textContent = secondaryText;
+      secondaryButton.setAttribute("data-visible", "true");
+    }
+
+    // Swap functionality
+    const shouldSwap = "{{ settings.swap_text_positions }}" === "true";
+    if (shouldSwap) {
+      mainText.parentNode.insertBefore(mainText, subText);
+    }
+  });
+</script>
