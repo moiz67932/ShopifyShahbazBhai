@@ -245,7 +245,7 @@
       ],
       "custom_css": [
         ".card__inner {min-height: 350px;}",
-        ".card {width: 100px;}"
+        ".card {width: 100%;}"
       ],
       "settings": {
         "header": "Best Sellers"
