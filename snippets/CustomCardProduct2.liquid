@@ -119,6 +119,8 @@
     endif
   -%}
   <div class="card-wrapper product-card-wrapper custom-product-card ">
+    <pre>{{ card_product | json }}</pre>
+
     <div
       class="
         card card--{{ settings.card_style }}
