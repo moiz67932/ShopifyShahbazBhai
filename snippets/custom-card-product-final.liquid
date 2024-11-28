@@ -48,10 +48,6 @@
                   border-radius: 8px;
                   transform: translateX(70%) translateY(-625%); /* Slight upward animation for hover */
                 }
-  .card__media{
-    z-index:10;
-    width:100px;
-  }
 
                 .button {
                   padding: 5px 10px;
@@ -123,7 +119,6 @@
     endif
   -%}
   <div class="card-wrapper product-card-wrapper custom-product-card ">
-    <pre>{{ card_product.featured_media.id | json }}</pre>
     <div
       class="
         card card--{{ settings.card_style }}
