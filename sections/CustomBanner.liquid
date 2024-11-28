@@ -1,6 +1,44 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Custom Banner",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "image",
+      "name":"Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "banner_image",
+          "label": "Banner Image"
+        },
+        {
+        "type": "text",
+        "id":"heading_text",
+        "label":"Main Text"
+      },
+        {
+        "type": "text",
+        "id":"sub_text",
+        "label":"Sub Text"
+      },
+       {
+        "type": "text",
+        "id":"primary_button_text",
+        "label":"Primary Button"
+      },
+        {
+        "type": "text",
+        "id":"secondary_button_text",
+        "label":"Secondary Button"
+      }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Banner"
+    }
+  ]
+}
 {% endschema %}
