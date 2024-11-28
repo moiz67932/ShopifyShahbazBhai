@@ -243,7 +243,9 @@
         "product_GGeQiG",
         "product_frppmy"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".card__inner{min-height:350px;}"
+      ],
       "settings": {
         "header": "Best Sellers"
       }
