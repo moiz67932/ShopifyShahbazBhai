@@ -184,18 +184,17 @@
 
         <div class="banner-buttons">
           {% if block.settings.primary_button_text and block.settings.primary_button_text != '' %}
-            <a href="#" class="">
-              <button class="button primary-button">
-                {{ block.settings.primary_button_text }}
-              </button>
-            </a>
+            <a
+              href="#"
+              class="button primary-button"
+              {{ block.settings.primary_button_text }}
+              </a
+            >
           {% endif %}
 
           {% if block.settings.secondary_button_text and block.settings.secondary_button_text != '' %}
-            <a href="#" class="">
-              <button class="button secondary-button">
-                {{ block.settings.secondary_button_text }}
-              </button>
+            <a href="#" class="button secondary-button">
+              {{ block.settings.secondary_button_text }}
             </a>
           {% endif %}
         </div>
