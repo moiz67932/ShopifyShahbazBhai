@@ -430,7 +430,7 @@
       "custom_css": [
         "p {font-size: 20px; line-height: 23px;}",
         "a {text-transform: uppercase; font-weight: 600; font-size: 17px; background-color: #996633; border-radius: 0px; width: 175px;}",
-        "a:hover{background-color:#775522;}"
+        "a:hover {background-color: #775522;}"
       ],
       "settings": {
         "image": "shopify://shop_images/hotdog-pin-man-jean-jacket.jpg",
@@ -690,6 +690,7 @@
         "buttons_XnDTTA"
       ],
       "settings": {
+        "image": "shopify://shop_images/man-walking-with-a-leather-travel-bag.jpg",
         "image_overlay_opacity": 20,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
