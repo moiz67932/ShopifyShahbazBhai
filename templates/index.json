@@ -17,10 +17,31 @@
           "settings": {
             "main_text": "STANDOUT ON THE SCENIC ROUTE."
           }
+        },
+        "sub_text_3En9r6": {
+          "type": "sub_text",
+          "settings": {
+            "sub_text": "Luggage. Apparel. Adventure"
+          }
+        },
+        "primary_button_FeKR3W": {
+          "type": "primary_button",
+          "settings": {
+            "primary_button_text": "LEATHER JACKETS"
+          }
+        },
+        "secondary_button_T47PFC": {
+          "type": "secondary_button",
+          "settings": {
+            "secondary_button_text": "TRAVEL BAGS"
+          }
         }
       },
       "block_order": [
-        "main_text_Hd6dXM"
+        "main_text_Hd6dXM",
+        "sub_text_3En9r6",
+        "primary_button_FeKR3W",
+        "secondary_button_T47PFC"
       ],
       "settings": {}
     },
