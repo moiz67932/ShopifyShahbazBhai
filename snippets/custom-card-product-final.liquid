@@ -394,31 +394,6 @@
           </div>
         {% elsif quick_add == 'bulk' %}
           {% if card_product.variants.size == 1 %}
-            <quick-add-bulk
-              data-min="{{ card_product.selected_or_first_available_variant.quantity_rule.min }}"
-              id="quick-add-bulk-{{ card_product.selected_or_first_available_variant.id }}-{{ section.id }}"
-              class="quick-add-bulk"
-              data-index="{{ card_product.selected_or_first_available_variant.id }}"
-            >
-              {% if card_product.selected_or_first_available_variant.available == false %}
-                <button
-                  id="{{ product_form_id }}-submit"
-                  type="submit"
-                  name="add"
-                  class="quick-add__submit button button--full-width button--secondary"
-                  aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
-                  data-sold-out-message="true"
-                  disabled
-                >
-                  <span>{{ 'products.product.sold_out' | t }}</span>
-                  <span class="sold-out-message hidden">
-                    {{ 'products.product.sold_out' | t }}
-                  </span>
-                </button>
-              {% else %}
-                {% render 'quantity-input', variant: card_product.selected_or_first_available_variant, min: 0 %}
-              {% endif %}
-            </quick-add-bulk>
           {% else %}
             <div class="quick-add no-js-hidden">
               {%- liquid
