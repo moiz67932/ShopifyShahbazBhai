@@ -293,7 +293,7 @@
 
         {% comment %} Add to Cart Button {% endcomment %}
         {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
-        {% if quick_add %}
+        {% if quick_add == true %}
           <div class="quick-add no-js-hidden">
             {%- liquid
               assign qty_rules = false
