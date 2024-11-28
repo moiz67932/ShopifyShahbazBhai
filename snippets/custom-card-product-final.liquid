@@ -105,6 +105,9 @@
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+<!-- {{ 'quick-add.js' }} -->
+
+<script {{ 'quick-add.js' | asset_url }} defer></script>
 
 {%- if card_product and card_product != empty -%}
   {%- liquid
