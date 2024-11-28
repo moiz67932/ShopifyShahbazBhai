@@ -429,7 +429,7 @@
       ],
       "custom_css": [
         "p {font-size: 20px; line-height: 23px;}",
-        "a {text-transform: uppercase; font-weight: 600; font-size: 17px; background-color: #1874b4; border-radius:0px;}"
+        "a {text-transform: uppercase; font-weight: 600; font-size: 17px; background-color: #1874b4; border-radius: 0px;}"
       ],
       "settings": {
         "image": "shopify://shop_images/hotdog-pin-man-jean-jacket.jpg",
@@ -478,6 +478,7 @@
         "text_4BVJtW",
         "button_NYBryN"
       ],
+      "disabled": true,
       "custom_css": [
         ".image-with-text__content {padding-top: 0px; padding-bottom: 0px; display: flex; justify-content: space-between;}"
       ],
@@ -551,6 +552,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "custom_css": [
         "h2 {text-align: center;}",
         ".card-wrapper {height: 350px; width: 250px; align-items: center;}",
