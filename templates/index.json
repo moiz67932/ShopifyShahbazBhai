@@ -26,6 +26,9 @@
       "block_order": [
         "image_kMAPDF"
       ],
+      "custom_css": [
+        ".button{border:none; border-radius:0px;}"
+      ],
       "settings": {}
     },
     "slideshow_NYqgwN": {
