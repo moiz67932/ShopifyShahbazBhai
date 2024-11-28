@@ -167,41 +167,40 @@
       class="custom-banner"
       style="background-image: url('{{ block.settings.banner_image | image_url }}'); background-size: cover; background-position: center;"
     >
-      <div class="text_container"> 
-      <div class="banner-text">
-        {% if block.settings.sub_text %}
-          <p class="sub-text">
-            {{ block.settings.sub_text }}
-          </p>
-        {% endif %}
+      <div class="text_container">
+        <div class="banner-text">
+          {% if block.settings.sub_text %}
+            <p class="sub-text">
+              {{ block.settings.sub_text }}
+            </p>
+          {% endif %}
 
-        {% if block.settings.heading_text %}
-          <h1 class="main-text">
-            {{ block.settings.heading_text }}
-          </h1>
-        {% endif %}
-      </div>
+          {% if block.settings.heading_text %}
+            <h1 class="main-text">
+              {{ block.settings.heading_text }}
+            </h1>
+          {% endif %}
+        </div>
 
-      <div class="banner-buttons">
-        {% if block.settings.primary_button_text and block.settings.primary_button_text != '' %}
-          <a href="#" class="button primary-button">
-            <!-- <button class=""> -->
-            {{ block.settings.primary_button_text }}
-            <!-- </button> -->
-          </a>
-        {% endif %}
+        <div class="banner-buttons">
+          {% if block.settings.primary_button_text and block.settings.primary_button_text != '' %}
+            <a href="#" class="button primary-button">
+              <!-- <button class=""> -->
+              {{ block.settings.primary_button_text }}
+              <!-- </button> -->
+            </a>
+          {% endif %}
 
-        {% if block.settings.secondary_button_text and block.settings.secondary_button_text != '' %}
-          <a href="#" class="">
-            <button class="button secondary-button">
-              {{ block.settings.secondary_button_text }}
-            </button>
-          </a>
-        {% endif %}
+          {% if block.settings.secondary_button_text and block.settings.secondary_button_text != '' %}
+            <a href="#" class="">
+              <button class="button secondary-button">
+                {{ block.settings.secondary_button_text }}
+              </button>
+            </a>
+          {% endif %}
+        </div>
       </div>
     </div>
-    </div
-    
   {% endif %}
 {% endfor %}
 
