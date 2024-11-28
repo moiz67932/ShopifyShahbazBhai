@@ -27,8 +27,8 @@
         "image_kMAPDF"
       ],
       "custom_css": [
-        ".button {padding: 5px 20px; background-color: #996633; color: white; text-decoration: none; border: none; border-radius: 0px;}",
-        " .button:hover {background-color: #775522; }"
+        ".button {padding: 5px 20px; background-color: #996633; color: white; text-decoration: none; border: none; border: #996633; border-radius: 0px;}",
+        ".button:hover {background-color: #775522;}"
       ],
       "settings": {}
     },
