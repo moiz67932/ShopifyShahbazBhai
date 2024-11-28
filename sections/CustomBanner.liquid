@@ -193,7 +193,9 @@
         {% if block.settings.secondary_button_text and block.settings.secondary_button_text != '' %}
           <a href="#" class="">
             <button class="button secondary-button">
-              {{ block.settings.secondary_button_text }}
+              <p>
+                {{ block.settings.secondary_button_text }}
+              </p>
             </button>
           </a>
         {% endif %}
