@@ -253,6 +253,24 @@
   .button:hover {
     background-color: #775522;
   }
+
+   /* Media Query for Small Screens */
+  @media (max-width: 768px) {
+    .text_container {
+      align-items: flex-start; /* Align items to the left */
+      text-align: left;
+      width: 90%; /* Adjust width to fit smaller screens */
+    }
+
+    .main-text {
+      font-size: 36px; /* Smaller font size for main text */
+      line-height: 40px; /* Adjust line height for smaller text */
+    }
+
+    .banner-buttons {
+      justify-content: flex-start; /* Align buttons to the left */
+    }
+  }
 </style>
 
 {% schema %}
