@@ -1,24 +1,204 @@
-<div class="custom-banner">
+{% comment %}
+  <div class="custom-banner">
+    <div class="banner-text">
+      <p class="sub-text">Luggage. Apparel. Adventure.</p>
+      <h1 class="main-text">STAND OUT ON THE SCENIC ROUTE.</h1>
+    </div>
+    <div class="banner-buttons">
+      <a href="#" class="button primary-button">Leather Jackets</a>
+      <a href="#" class="button secondary-button">Travel Bags</a>
+    </div>
+  </div>
+
+  <style>
+      .custom-banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #e3e0d6; /* Light beige background */
+      padding: 50px;
+      position: relative;
+    }
+
+    .banner-text {
+      margin-bottom: 20px;
+    }
+
+    .sub-text {
+      font-size: 18px;
+      color: #8d8d8d; /* Subtle grey */
+      margin-bottom: 10px;
+    }
+
+    .main-text {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333; /* Dark text */
+    }
+
+    .banner-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      background-color: #996633; /* Brown */
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #775522;
+    }
+
+    /* Hide buttons by default */
+    .primary-button, .secondary-button {
+      display: none;
+    }
+
+    /* Show buttons only if text exists */
+    .primary-button[data-visible="true"],
+    .secondary-button[data-visible="true"] {
+      display: inline-block;
+    }
+  </style>
+
+  {% schema %}
+  {
+    "name": "Custom Banner",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "main_text",
+        "name": "Main Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "main_text",
+            "label": "Main Text"
+          }
+        ]
+      },
+      {
+        "type": "sub_text",
+        "name": "Sub Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "sub_text",
+            "label": "Sub Text"
+          }
+        ]
+      },
+      {
+        "type": "primary_button",
+        "name": "Primary Button",
+        "settings": [
+          {
+            "type": "text",
+            "id": "primary_button_text",
+            "label": "Primary Button Text"
+          }
+        ]
+      },
+      {
+        "type": "secondary_button",
+        "name": "Secondary Button",
+        "settings": [
+          {
+            "type": "text",
+            "id": "secondary_button_text",
+            "label": "Secondary Button Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Banner",
+        "category": "Banner"
+      }
+    ]
+  }
+  {% endschema %}
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+      const mainText = document.querySelector(".main-text");
+      const subText = document.querySelector(".sub-text");
+      const primaryButton = document.querySelector(".primary-button");
+      const secondaryButton = document.querySelector(".secondary-button");
+
+      // Control button visibility
+      const primaryText = "{{ settings.primary_button_text }}";
+      const secondaryText = "{{ settings.secondary_button_text }}";
+
+      if (primaryText) {
+        primaryButton.textContent = primaryText;
+        primaryButton.setAttribute("data-visible", "true");
+      }
+      if (secondaryText) {
+        secondaryButton.textContent = secondaryText;
+        secondaryButton.setAttribute("data-visible", "true");
+      }
+
+      // Swap functionality
+      const shouldSwap = "{{ settings.swap_text_positions }}" === "true";
+      if (shouldSwap) {
+        mainText.parentNode.insertBefore(mainText, subText);
+      }
+    });
+  </script>
+{% endcomment %}
+
+<div
+  class="custom-banner"
+  style="background-image: url('{{ section.blocks[0].settings.banner_image | file_url }}'); background-size: cover; background-position: center;"
+>
   <div class="banner-text">
-    <p class="sub-text">Luggage. Apparel. Adventure.</p>
-    <h1 class="main-text">STAND OUT ON THE SCENIC ROUTE.</h1>
+    <p class="sub-text">
+      {{ section.blocks[0].settings.sub_text }}
+    </p>
+    <h1 class="main-text">
+      {{ section.blocks[0].settings.heading_text }}
+    </h1>
   </div>
   <div class="banner-buttons">
-    <a href="#" class="button primary-button">Leather Jackets</a>
-    <a href="#" class="button secondary-button">Travel Bags</a>
+    {% if section.blocks[0].settings.primary_button_text %}
+      <a
+        href="#"
+        class="button primary-button"
+      >
+        {{ section.blocks[0].settings.primary_button_text }}
+      </a>
+    {% endif %}
+    {% if section.blocks[0].settings.secondary_button_text %}
+      <a
+        href="#"
+        class="button secondary-button"
+      >
+        {{ section.blocks[0].settings.secondary_button_text }}
+      </a>
+    {% endif %}
   </div>
 </div>
 
 <style>
-    .custom-banner {
+  .custom-banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #e3e0d6; /* Light beige background */
     padding: 50px;
     position: relative;
+    height: 500px;
+    color: #fff; /* Default text color for visibility over images */
   }
 
   .banner-text {
@@ -27,14 +207,14 @@
 
   .sub-text {
     font-size: 18px;
-    color: #8d8d8d; /* Subtle grey */
+    color: #f8f8f8; /* Light grey */
     margin-bottom: 10px;
   }
 
   .main-text {
     font-size: 36px;
     font-weight: bold;
-    color: #333; /* Dark text */
+    color: #fff;
   }
 
   .banner-buttons {
@@ -44,7 +224,7 @@
 
   .button {
     padding: 10px 20px;
-    background-color: #996633; /* Brown */
+    background-color: #996633;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -54,17 +234,6 @@
   .button:hover {
     background-color: #775522;
   }
-
-  /* Hide buttons by default */
-  .primary-button, .secondary-button {
-    display: none;
-  }
-
-  /* Show buttons only if text exists */
-  .primary-button[data-visible="true"],
-  .secondary-button[data-visible="true"] {
-    display: inline-block;
-  }
 </style>
 
 {% schema %}
@@ -73,46 +242,33 @@
   "settings": [],
   "blocks": [
     {
-      "type": "main_text",
-      "name": "Main Text",
+      "type": "image",
+      "name": "Image",
       "settings": [
         {
+          "type": "image_picker",
+          "id": "banner_image",
+          "label": "Banner Image"
+        },
+        {
           "type": "text",
-          "id": "main_text",
+          "id": "heading_text",
           "label": "Main Text"
-        }
-      ]
-    },
-    {
-      "type": "sub_text",
-      "name": "Sub Text",
-      "settings": [
+        },
         {
           "type": "text",
           "id": "sub_text",
           "label": "Sub Text"
-        }
-      ]
-    },
-    {
-      "type": "primary_button",
-      "name": "Primary Button",
-      "settings": [
+        },
         {
           "type": "text",
           "id": "primary_button_text",
-          "label": "Primary Button Text"
-        }
-      ]
-    },
-    {
-      "type": "secondary_button",
-      "name": "Secondary Button",
-      "settings": [
+          "label": "Primary Button"
+        },
         {
           "type": "text",
           "id": "secondary_button_text",
-          "label": "Secondary Button Text"
+          "label": "Secondary Button"
         }
       ]
     }
@@ -125,31 +281,3 @@
   ]
 }
 {% endschema %}
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const mainText = document.querySelector(".main-text");
-    const subText = document.querySelector(".sub-text");
-    const primaryButton = document.querySelector(".primary-button");
-    const secondaryButton = document.querySelector(".secondary-button");
-
-    // Control button visibility
-    const primaryText = "{{ settings.primary_button_text }}";
-    const secondaryText = "{{ settings.secondary_button_text }}";
-
-    if (primaryText) {
-      primaryButton.textContent = primaryText;
-      primaryButton.setAttribute("data-visible", "true");
-    }
-    if (secondaryText) {
-      secondaryButton.textContent = secondaryText;
-      secondaryButton.setAttribute("data-visible", "true");
-    }
-
-    // Swap functionality
-    const shouldSwap = "{{ settings.swap_text_positions }}" === "true";
-    if (shouldSwap) {
-      mainText.parentNode.insertBefore(mainText, subText);
-    }
-  });
-</script>
