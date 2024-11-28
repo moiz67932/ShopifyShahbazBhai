@@ -326,22 +326,22 @@
         "padding_bottom": 36
       }
     },
-    "collection_list_JiAkyT": {
-      "type": "collection-list",
+    "custom_collection_list_cAfzrg": {
+      "type": "CustomCollectionList",
       "blocks": {
-        "featured_collection_QUeijj": {
+        "featured_collection_ghwDzw": {
           "type": "featured_collection",
           "settings": {
             "collection": "men-bags"
           }
         },
-        "featured_collection_DYBkzK": {
+        "featured_collection_MTnJgY": {
           "type": "featured_collection",
           "settings": {
             "collection": "men-jackets"
           }
         },
-        "featured_collection_xyRzhj": {
+        "featured_collection_JhGy4w": {
           "type": "featured_collection",
           "settings": {
             "collection": "men-bags"
@@ -349,14 +349,14 @@
         }
       },
       "block_order": [
-        "featured_collection_QUeijj",
-        "featured_collection_DYBkzK",
-        "featured_collection_xyRzhj"
+        "featured_collection_ghwDzw",
+        "featured_collection_MTnJgY",
+        "featured_collection_JhGy4w"
       ],
       "settings": {
         "title": "",
         "heading_size": "h1",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "columns_desktop": 3,
         "color_scheme": "",
         "show_view_all": false,
@@ -760,7 +760,7 @@
     "collage_cdnE3P",
     "custom_product_card_QPTYac",
     "collage_J6FfcA",
-    "collection_list_JiAkyT",
+    "custom_collection_list_cAfzrg",
     "collection_list_Hhb4p7",
     "image_with_text_7zai4y",
     "custom_image_with_text_qfqedV",
