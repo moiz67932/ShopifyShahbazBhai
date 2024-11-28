@@ -162,6 +162,9 @@
     style="background-image: url('{{ block.settings.banner_image | image_url }}'); background-size: cover; background-position: center;"
   >
     <div class="banner-text">
+      {%- case block.type -%}
+        {%- when 'heading' -%}
+      {% endcase %}
       <p class="sub-text">
         {{ block.settings.sub_text }}
       </p>
