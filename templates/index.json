@@ -690,7 +690,7 @@
         "buttons_XnDTTA"
       ],
       "custom_css": [
-        ".banner__content {width: full;}"
+        "#Banner-template--23997952098642__image_banner_rDfPdD{padding:0px;}"
       ],
       "settings": {
         "image": "shopify://shop_images/man-walking-with-a-leather-travel-bag.jpg",
