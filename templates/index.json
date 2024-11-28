@@ -12,36 +12,19 @@
     "custom_banner_dGxhCY": {
       "type": "CustomBanner",
       "blocks": {
-        "main_text_Hd6dXM": {
-          "type": "main_text",
+        "image_kMAPDF": {
+          "type": "image",
           "settings": {
-            "main_text": "STANDOUT ON THE SCENIC ROUTE."
-          }
-        },
-        "sub_text_3En9r6": {
-          "type": "sub_text",
-          "settings": {
-            "sub_text": "Luggage. Apparel. Adventure"
-          }
-        },
-        "primary_button_FeKR3W": {
-          "type": "primary_button",
-          "settings": {
-            "primary_button_text": "LEATHER JACKETS"
-          }
-        },
-        "secondary_button_T47PFC": {
-          "type": "secondary_button",
-          "settings": {
-            "secondary_button_text": "TRAVEL BAGS"
+            "banner_image": "shopify://shop_images/clothing-on-a-shop-rack-with-flowers-in-the-background.jpg",
+            "heading_text": "DESIGNED TO EXPLORE. BUILT TO ENDURE.",
+            "sub_text": "Fall 2024 Collection",
+            "primary_button_text": "New Arrivals",
+            "secondary_button_text": "Leather Jackets"
           }
         }
       },
       "block_order": [
-        "main_text_Hd6dXM",
-        "sub_text_3En9r6",
-        "primary_button_FeKR3W",
-        "secondary_button_T47PFC"
+        "image_kMAPDF"
       ],
       "settings": {}
     },
