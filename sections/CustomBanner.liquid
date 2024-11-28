@@ -156,37 +156,39 @@
   </script>
 {% endcomment %}
 
-<div
-  class="custom-banner"
-  style="background-image: url('{{ section.blocks.settings.banner_image | file_url }}'); background-size: cover; background-position: center;"
->
-  <div class="banner-text">
-    <p class="sub-text">
-      {{ section.blocks[0].settings.sub_text }}
-    </p>
-    <h1 class="main-text">
-      {{ section.blocks[0].settings.heading_text }}
-    </h1>
+{% for block in section.blocks %}
+  <div
+    class="custom-banner"
+    style="background-image: url('{{ block.settings.banner_image | image_url }}'); background-size: cover; background-position: center;"
+  >
+    <div class="banner-text">
+      <p class="sub-text">
+        {{ section.blocks[0].settings.sub_text }}
+      </p>
+      <h1 class="main-text">
+        {{ section.blocks[0].settings.heading_text }}
+      </h1>
+    </div>
+    <div class="banner-buttons">
+      {% if section.blocks[0].settings.primary_button_text %}
+        <a
+          href="#"
+          class="button primary-button"
+        >
+          {{ section.blocks[0].settings.primary_button_text }}
+        </a>
+      {% endif %}
+      {% if section.blocks[0].settings.secondary_button_text %}
+        <a
+          href="#"
+          class="button secondary-button"
+        >
+          {{ section.blocks[0].settings.secondary_button_text }}
+        </a>
+      {% endif %}
+    </div>
   </div>
-  <div class="banner-buttons">
-    {% if section.blocks[0].settings.primary_button_text %}
-      <a
-        href="#"
-        class="button primary-button"
-      >
-        {{ section.blocks[0].settings.primary_button_text }}
-      </a>
-    {% endif %}
-    {% if section.blocks[0].settings.secondary_button_text %}
-      <a
-        href="#"
-        class="button secondary-button"
-      >
-        {{ section.blocks[0].settings.secondary_button_text }}
-      </a>
-    {% endif %}
-  </div>
-</div>
+{% endfor %}
 
 <style>
   .custom-banner {
