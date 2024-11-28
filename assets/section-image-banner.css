@@ -479,9 +479,3 @@
     color: currentColor;
   }
 }
-
-section {
-  padding: 0px;
-  width: 100%;
-  object-fit: cover;
-}
