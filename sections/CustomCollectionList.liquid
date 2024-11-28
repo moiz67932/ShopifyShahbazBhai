@@ -36,165 +36,165 @@
 </section>
 
 <style>
-          .custom-collection-grid2 {
-              text-align: center;
-              padding-top: 40px;
-            padding-right:20px;
-            padding-left:20px;
-            padding-bottom:0px;
-              margin-bottom: 0px;
-            background-color:#181404;
-          }
-
-          .custom-collection-grid2 h1 {
-              font-size: 2.5rem;
-              margin-bottom: 10px;
-          }
-  /*
-        .custom-collection-grid2 .item p {
-          position: relative;
-          bottom: 150px;
-          font-size:18px;
-          left: 50%;
-          transform: translateX(-50%);
-          color: #fff;
-          font-weight: 400;
-          text-transform: uppercase;
-          text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-          margin: 0;
-      }
-
-      .custom-collection-grid2 .item h3 {
-          position: relative;
-          bottom: 150px;
-          font-size:24px;
-          left: 50%;
-          transform: translateX(-50%);
-          color: #fff;
-          font-weight: 700;
-          text-transform: uppercase;
-          text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-          margin: 0;
-      }
-
-      .custom-collection-grid2 .item button {
-          position: relative;
-          bottom: 50px;
-          left: 50%;
-          transform: translateX(-50%);
-          padding: 12px 24px;
-          background-color: rgba(0, 0, 0, 0.85);
-          color: #fff;
-          border: none;
-          font-size: 1.2rem;
-          text-transform: uppercase;
-          font-weight: 700;
-          border-radius: 5px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-          transition: background-color 0.3s ease, transform 0.3s ease;
-      } */
-
-      .custom-collection-grid2 .item button:hover {
-          background-color: rgba(0, 0, 0, 1);
-          transform: scale(1.05);
-        transform: translateX(-50%);
-      }
-
-      .custom-collection-grid2 .item a {
-        text-decoration: none;
-    }
-
-          .custom-collection-grid2 .grid {
-              display: grid;
-              /* grid-template-areas:
-                   "abaya abaya"
-                  "jilbab kaftan"
-                  "hijab hijab";  */
-
-                  grid-template-areas:
-                  "abaya jilbab kaftan";
-              grid-template-columns: 1fr 1fr 1fr;
-              grid-template-rows: auto auto auto;
-                gap: 30px;
-              max-width: 1200px;
-              margin: 0 auto;
-            padding-bottom:0px;
-            margin-bottom:0px;
-          }
-
-          /* Media query for small devices */
-        @media (max-width: 768px) {
-          .custom-collection-grid2 .grid {
-              grid-template-areas:
-                  "abaya"
-                  "jilbab"
-                  "kaftan";
-              grid-template-columns: 1fr;
-              grid-template-rows: auto auto auto;
-          }
-
-              .custom-collection-grid2 .abaya {
-              max-height: 350px;
-          }
-
-          .custom-collection-grid2 .jilbab {
-              max-height: 350px;
-          }
-
-          .custom-collection-grid2 .kaftan {
-              max-height: 350px;
-          }
+        .custom-collection-grid2 {
+            text-align: center;
+            padding-top: 40px;
+          padding-right:20px;
+          padding-left:20px;
+          padding-bottom:0px;
+            margin-bottom: 0px;
+          background-color:#181404;
         }
 
-          .custom-collection-grid2 .item {
-              position: relative;
-              background-color: #fff;
-              border: none;
-              border-radius: 10px;
-              overflow: hidden;
-              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          }
+        .custom-collection-grid2 h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
 
-          .custom-collection-grid2 .abaya {
-              grid-area: abaya;
-              max-height: 550px;
-          }
+      .custom-collection-grid2 .item p {
+        position: relative;
+        bottom: 150px;
+        font-size:18px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        margin: 0;
+    }
 
-          .custom-collection-grid2 .jilbab {
-              grid-area: jilbab;
-              max-height: 550px;
-          }
+    .custom-collection-grid2 .item h3 {
+        position: relative;
+        bottom: 150px;
+        font-size:24px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        margin: 0;
+    }
 
-          .custom-collection-grid2 .kaftan {
-              grid-area: kaftan;
-              max-height: 550px;
-          }
+    .custom-collection-grid2 .item button {
+        position: relative;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 24px;
+        background-color: rgba(0, 0, 0, 0.85);
+        color: #fff;
+        border: none;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .custom-collection-grid2 .item button:hover {
+        background-color: rgba(0, 0, 0, 1);
+        transform: scale(1.05);
+      transform: translateX(-50%);
+    }
+
+    .custom-collection-grid2 .item a {
+      text-decoration: none;
+  }
+
+        .custom-collection-grid2 .grid {
+            display: grid;
+            /* grid-template-areas:
+                 "abaya abaya"
+                "jilbab kaftan"
+                "hijab hijab";  */
+
+                grid-template-areas:
+                "abaya jilbab kaftan";
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+              gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+          padding-bottom:0px;
+          margin-bottom:0px;
+        }
+
+        /* Media query for small devices */
+      @media (max-width: 768px) {
+        .custom-collection-grid2 .grid {
+            grid-template-areas:
+                "abaya"
+                "jilbab"
+                "kaftan";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+        }
+
+            .custom-collection-grid2 .abaya {
+            max-height: 350px;
+        }
+
+        .custom-collection-grid2 .jilbab {
+            max-height: 350px;
+        }
+
+        .custom-collection-grid2 .kaftan {
+            max-height: 350px;
+        }
+      }
+
+        .custom-collection-grid2 .item {
+            position: relative;
+            background-color: #fff;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-collection-grid2 .abaya {
+            grid-area: abaya;
+            max-height: 550px;
+        }
+
+        .custom-collection-grid2 .jilbab {
+            grid-area: jilbab;
+            max-height: 550px;
+        }
+
+        .custom-collection-grid2 .kaftan {
+            grid-area: kaftan;
+            max-height: 550px;
+        }
 
 
-          .custom-collection-grid2 .item img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-          }
+        .custom-collection-grid2 .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-          .custom-collection-grid2 .item button {
-              position: absolute;
-              bottom: 20px;
-              left: 50%;
-              transform: translateX(-50%);
-              padding: 10px 20px;
-              background-color: rgba(0, 0, 0, 0.7);
-              color: #fff;
-              border: none;
-              cursor: pointer;
-              font-size: 1.4rem;
-              border-radius: 5px;
-              transition: background-color 0.3s ease;
-          }
+        .custom-collection-grid2 .item button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.4rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
 
-          .custom-collection-grid2 .item button:hover {
-              background-color: rgba(0, 0, 0, 0.85);
-          }
+        .custom-collection-grid2 .item button:hover {
+            background-color: rgba(0, 0, 0, 0.85);
+        }
 </style>
 
 {% schema %}
