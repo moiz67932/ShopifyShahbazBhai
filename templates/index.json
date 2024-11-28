@@ -9,6 +9,21 @@
  */
 {
   "sections": {
+    "custom_banner_dGxhCY": {
+      "type": "CustomBanner",
+      "blocks": {
+        "main_text_Hd6dXM": {
+          "type": "main_text",
+          "settings": {
+            "main_text": "STANDOUT ON THE SCENIC ROUTE."
+          }
+        }
+      },
+      "block_order": [
+        "main_text_Hd6dXM"
+      ],
+      "settings": {}
+    },
     "slideshow_NYqgwN": {
       "type": "slideshow",
       "blocks": {
@@ -684,6 +699,7 @@
     }
   },
   "order": [
+    "custom_banner_dGxhCY",
     "slideshow_NYqgwN",
     "custom_slider_main_4h8JLp",
     "rich_text_CjbypF",
