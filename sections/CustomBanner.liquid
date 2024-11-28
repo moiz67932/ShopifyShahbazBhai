@@ -157,40 +157,45 @@
 {% endcomment %}
 
 {% for block in section.blocks %}
-  <div
-    class="custom-banner"
-    style="background-image: url('{{ block.settings.banner_image | image_url }}'); background-size: cover; background-position: center;"
-  >
-    <div class="banner-text">
-      {%- case block.type -%}
-        {%- when 'heading' -%}
-      {% endcase %}
-      <p class="sub-text">
-        {{ block.settings.sub_text }}
-      </p>
-      <h1 class="main-text">
-        {{ block.settings.heading_text }}
-      </h1>
+  {% if block.settings.banner_image
+    or block.settings.heading_text
+    or block.settings.sub_text
+    or block.settings.primary_button_text
+    or block.settings.secondary_button_text
+  %}
+    <div
+      class="custom-banner"
+      style="background-image: url('{{ block.settings.banner_image | image_url }}'); background-size: cover; background-position: center;"
+    >
+      <div class="banner-text">
+        {% if block.settings.sub_text %}
+          <p class="sub-text">
+            {{ block.settings.sub_text }}
+          </p>
+        {% endif %}
+
+        {% if block.settings.heading_text %}
+          <h1 class="main-text">
+            {{ block.settings.heading_text }}
+          </h1>
+        {% endif %}
+      </div>
+
+      <div class="banner-buttons">
+        {% if block.settings.primary_button_text %}
+          <a href="#" class="button primary-button">
+            {{ block.settings.primary_button_text }}
+          </a>
+        {% endif %}
+
+        {% if block.settings.secondary_button_text %}
+          <a href="#" class="button secondary-button">
+            {{ block.settings.secondary_button_text }}
+          </a>
+        {% endif %}
+      </div>
     </div>
-    <div class="banner-buttons">
-      {% if block.settings.primary_button_text %}
-        <a
-          href="#"
-          class="button primary-button"
-        >
-          {{ block.settings.primary_button_text }}
-        </a>
-      {% endif %}
-      {% if block.settings.secondary_button_text %}
-        <a
-          href="#"
-          class="button secondary-button"
-        >
-          {{ block.settings.secondary_button_text }}
-        </a>
-      {% endif %}
-    </div>
-  </div>
+  {% endif %}
 {% endfor %}
 
 <style>
