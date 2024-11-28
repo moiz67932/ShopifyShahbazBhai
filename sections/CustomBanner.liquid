@@ -189,8 +189,10 @@
         {% endif %}
 
         {% if block.settings.secondary_button_text and block.settings.secondary_button_text != '' %}
-          <a href="#" class="button secondary-button">
-            {{ block.settings.secondary_button_text }}
+          <a href="#" class="">
+            <button class="button secondary-button">
+              {{ block.settings.secondary_button_text }}
+            </button>
           </a>
         {% endif %}
       </div>
@@ -230,6 +232,8 @@
   .banner-buttons {
     display: flex;
     gap: 20px;
+     outline: none; /* Removes the default focus rectangle */
+  border: none; /* Removes any border */
   }
 
   .button {
@@ -239,8 +243,6 @@
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-     outline: none; /* Removes the default focus rectangle */
-  border: none; /* Removes any border */
   }
 
   .button:hover {
