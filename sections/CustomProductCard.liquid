@@ -5,7 +5,7 @@
   <div class="carousel">
     {% for block in section.blocks %}
       <div class="productCard carousel-cell">
-        {% render 'card-product',
+        {% render 'custom-card-product-final',
           card_product: block.settings.product,
           show_secondary_image: true,
           show_price: true,
