@@ -244,7 +244,8 @@
         "product_frppmy"
       ],
       "custom_css": [
-        ".card__inner {min-height: 350px;}"
+        ".card__inner {min-height: 350px;}",
+        ".card{width:100%;}"
       ],
       "settings": {
         "header": "Best Sellers"
