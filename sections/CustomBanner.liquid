@@ -185,9 +185,9 @@
         <div class="banner-buttons">
           {% if block.settings.primary_button_text and block.settings.primary_button_text != '' %}
             <a href="#" class="button primary-button">
-              <!-- <button class=""> -->
-              {{ block.settings.primary_button_text }}
-              <!-- </button> -->
+              <button class="">
+                {{ block.settings.primary_button_text }}
+              </button>
             </a>
           {% endif %}
 
@@ -247,7 +247,6 @@
   }
 
   .button {
-    width:200px;
     padding: 30px 20px;
     background-color: #996633;
     color: white;
