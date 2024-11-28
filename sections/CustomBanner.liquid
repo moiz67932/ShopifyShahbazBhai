@@ -1,3 +1,72 @@
+<div class="custom-banner">
+  <div class="banner-text">
+    <p class="sub-text">Luggage. Apparel. Adventure.</p>
+    <h1 class="main-text">STAND OUT ON THE SCENIC ROUTE.</h1>
+  </div>
+  <div class="banner-buttons">
+    <a href="#" class="button primary-button">Leather Jackets</a>
+    <a href="#" class="button secondary-button">Travel Bags</a>
+  </div>
+</div>
+
+<style>
+    .custom-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #e3e0d6; /* Light beige background */
+    padding: 50px;
+    position: relative;
+  }
+
+  .banner-text {
+    margin-bottom: 20px;
+  }
+
+  .sub-text {
+    font-size: 18px;
+    color: #8d8d8d; /* Subtle grey */
+    margin-bottom: 10px;
+  }
+
+  .main-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333; /* Dark text */
+  }
+
+  .banner-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    background-color: #996633; /* Brown */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .button:hover {
+    background-color: #775522;
+  }
+
+  /* Hide buttons by default */
+  .primary-button, .secondary-button {
+    display: none;
+  }
+
+  /* Show buttons only if text exists */
+  .primary-button[data-visible="true"],
+  .secondary-button[data-visible="true"] {
+    display: inline-block;
+  }
+</style>
+
 {% schema %}
 {
   "name": "Custom Banner",
