@@ -689,6 +689,9 @@
         "text_BCQqAG",
         "buttons_XnDTTA"
       ],
+      "custom_css": [
+        ".banner__content{width:100%; padding-left:0px; padding-right:0px;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/man-walking-with-a-leather-travel-bag.jpg",
         "image_overlay_opacity": 20,
