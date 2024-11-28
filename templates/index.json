@@ -28,7 +28,8 @@
       ],
       "custom_css": [
         ".button {padding: 5px 20px; background-color: #996633; color: white; text-decoration: none; border: none; border: #996633; border-radius: 0px; width: 200px;}",
-        ".button:hover {background-color: #775522;}"
+        ".button:hover {background-color: #775522;}",
+        ".banner-buttons {display: flex; gap: 20px; display: flex; align-items: center; justify-content: center;}"
       ],
       "settings": {}
     },
