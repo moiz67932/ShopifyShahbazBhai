@@ -205,57 +205,65 @@
 {% endfor %}
 
 <style>
-  .text_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width:50vw;
-  }
-  .custom-banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px;
-    position: relative;
-    height: 500px;
-    color: #fff; /* Default text color for visibility over images */
-  }
+   .text_container{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     width:50vw;
+   }
+   .custom-banner {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     padding: 50px;
+     position: relative;
+     height: 500px;
+     color: #fff; /* Default text color for visibility over images */
+   }
 
-  .banner-text {
-  }
+   .banner-text {
+   }
 
-  .sub-text {
-    font-size: 18px;
-    color: #f8f8f8; /* Light grey */
-  }
+   .sub-text {
+     font-size: 18px;
+     color: #f8f8f8; /* Light grey */
+   }
 
-  .main-text {
-    font-size: 48px;
-    font-weight: bold;
-    color: #fff;
-  }
+   .main-text {
+     font-size: 48px;
+     font-weight: bold;
+     color: #fff;
+   }
 
   .banner-buttons {
-    display: flex;
-    gap: 20px;
-  }
+     display: flex; /* Use flexbox for button alignment */
+     width: 100%; /* Make buttons span the full width */
+   }
 
-  .button {
-    padding: 10px 20px;
-    background-color: #996633;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius:0px;
-  }
+   .button {
+     flex: 1; /* Ensure each button takes up equal space */
+     text-align: center;
+     padding: 15px 0; /* Add vertical padding for better height */
+     background-color: #996633; /* Background color for buttons */
+     color: white;
+     text-decoration: none;
+     font-weight: bold;
+     border-radius: 0; /* Remove rounded corners */
+     border: 1px solid transparent; /* Optional: Add borders for better visibility */
+   }
 
-  .button:hover {
-    background-color: #775522;
-  }
+   .button:hover {
+     background-color: #775522;
+   }
+
+   /* Add spacing between the two buttons */
+   .primary-button {
+     border-right: 1px solid white; /* Add a divider between buttons */
+   }
 </style>
 
 {% schema %}
