@@ -429,7 +429,7 @@
       ],
       "custom_css": [
         "p {font-size: 20px; line-height: 23px;}",
-        "a {text-transform: uppercase; font-weight: 600; font-size: 17px; background-color: #1874b4; border-radius: 0px;}"
+        "a {text-transform: uppercase; font-weight: 600; font-size: 17px; background-color: #996633; border-radius: 0px; width: 175px;}"
       ],
       "settings": {
         "image": "shopify://shop_images/hotdog-pin-man-jean-jacket.jpg",
