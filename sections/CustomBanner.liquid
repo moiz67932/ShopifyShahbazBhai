@@ -163,27 +163,27 @@
   >
     <div class="banner-text">
       <p class="sub-text">
-        {{ section.blocks[0].settings.sub_text }}
+        {{ block.settings.sub_text }}
       </p>
       <h1 class="main-text">
-        {{ section.blocks[0].settings.heading_text }}
+        {{ block.settings.heading_text }}
       </h1>
     </div>
     <div class="banner-buttons">
-      {% if section.blocks[0].settings.primary_button_text %}
+      {% if block.settings.primary_button_text %}
         <a
           href="#"
           class="button primary-button"
         >
-          {{ section.blocks[0].settings.primary_button_text }}
+          {{ block.settings.primary_button_text }}
         </a>
       {% endif %}
-      {% if section.blocks[0].settings.secondary_button_text %}
+      {% if block.settings.secondary_button_text %}
         <a
           href="#"
           class="button secondary-button"
         >
-          {{ section.blocks[0].settings.secondary_button_text }}
+          {{ block.settings.secondary_button_text }}
         </a>
       {% endif %}
     </div>
