@@ -26,14 +26,6 @@
         <button>{{ section.settings.collection3.title }}</button>
       </a>
     </div>
-
-    <!-- Hijab Scarfs - Taller Image -->
-    <div class="item hijab">
-      <a href="{{ section.settings.collection4.url }}">
-        <img src="{{ section.settings.collection4.image | image_url }}" alt="{{ section.settings.collection4.title }}">
-        <button>{{ section.settings.collection4.title }}</button>
-      </a>
-    </div>
   </div>
 </section>
 
@@ -57,9 +49,8 @@
             "hijab hijab";  */
 
             grid-template-areas:
-            "abaya jilbab hijab"
-            "abaya kaftan hijab";
-        grid-template-columns: 2fr 1fr 1fr;
+            "abaya jilbab kaftan";
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto auto;
         gap: 20px;
         max-width: 1000px;
@@ -70,10 +61,10 @@
   @media (max-width: 768px) {
     .custom-collection-grid .grid {
         grid-template-areas:
-            "abaya abaya"
-            "jilbab kaftan"
-            "hijab hijab";
-        grid-template-columns: 1fr 1fr;
+            "abaya"
+            "jilbab"
+            "kaftan";
+        grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
     }
   }
