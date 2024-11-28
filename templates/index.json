@@ -210,10 +210,38 @@
           "settings": {
             "product": "dummy-jacket-2"
           }
+        },
+        "product_fPWXQq": {
+          "type": "product",
+          "settings": {
+            "product": "dummy-jacket-3"
+          }
+        },
+        "product_AHmNMf": {
+          "type": "product",
+          "settings": {
+            "product": "dummy-jacket-2"
+          }
+        },
+        "product_GGeQiG": {
+          "type": "product",
+          "settings": {
+            "product": "dummy-jacket-3"
+          }
+        },
+        "product_frppmy": {
+          "type": "product",
+          "settings": {
+            "product": "dummy-jacket-2"
+          }
         }
       },
       "block_order": [
-        "product_yMA8kW"
+        "product_yMA8kW",
+        "product_fPWXQq",
+        "product_AHmNMf",
+        "product_GGeQiG",
+        "product_frppmy"
       ],
       "custom_css": [],
       "settings": {
