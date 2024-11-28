@@ -1,4 +1,4 @@
-<section class="moiz-collection-grid">
+<section class="custom-collection-grid">
   <h1>{{ section.settings.heading_text }}</h1>
   <p>{{ section.settings.subheading_text }}</p>
 
@@ -38,18 +38,18 @@
 </section>
 
 <style>
-    .moiz-collection-grid {
+    .custom-collection-grid {
         text-align: center;
         padding: 20px;
         margin-bottom: 40px;
     }
 
-    .moiz-collection-grid h1 {
+    .custom-collection-grid h1 {
         font-size: 2.5rem;
         margin-bottom: 10px;
     }
 
-    .moiz-collection-grid .grid {
+    .custom-collection-grid .grid {
         display: grid;
         /* grid-template-areas:
              "abaya abaya"
@@ -68,7 +68,7 @@
 
     /* Media query for small devices */
   @media (max-width: 768px) {
-    .moiz-collection-grid .grid {
+    .custom-collection-grid .grid {
         grid-template-areas:
             "abaya abaya"
             "jilbab kaftan"
@@ -78,7 +78,7 @@
     }
   }
 
-    .moiz-collection-grid .item {
+    .custom-collection-grid .item {
         position: relative;
         background-color: #fff;
         border: 1px solid #ddd;
@@ -87,33 +87,33 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .moiz-collection-grid .abaya {
+    .custom-collection-grid .abaya {
         grid-area: abaya;
         max-height: 550px;
     }
 
-    .moiz-collection-grid .jilbab {
+    .custom-collection-grid .jilbab {
         grid-area: jilbab;
         max-height: 270px;
     }
 
-    .moiz-collection-grid .kaftan {
+    .custom-collection-grid .kaftan {
         grid-area: kaftan;
         max-height: 270px;
     }
 
-    .moiz-collection-grid .hijab {
+    .custom-collection-grid .hijab {
         grid-area: hijab;
         max-height: 550px;
     }
 
-    .moiz-collection-grid .item img {
+    .custom-collection-grid .item img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    .moiz-collection-grid .item button {
+    .custom-collection-grid .item button {
         position: absolute;
         bottom: 20px;
         left: 50%;
@@ -128,7 +128,7 @@
         transition: background-color 0.3s ease;
     }
 
-    .moiz-collection-grid .item button:hover {
+    .custom-collection-grid .item button:hover {
         background-color: rgba(0, 0, 0, 0.85);
     }
 </style>
