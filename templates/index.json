@@ -328,42 +328,13 @@
     },
     "custom_collection_list_cAfzrg": {
       "type": "CustomCollectionList",
-      "blocks": {
-        "featured_collection_ghwDzw": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "men-bags"
-          }
-        },
-        "featured_collection_MTnJgY": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "men-jackets"
-          }
-        },
-        "featured_collection_JhGy4w": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "men-bags"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_ghwDzw",
-        "featured_collection_MTnJgY",
-        "featured_collection_JhGy4w"
-      ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "inverse",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading_text": "",
+        "subheading_text": "",
+        "collection1": "men-bags",
+        "collection2": "men-jackets",
+        "collection3": "men-jackets",
+        "collection4": "men-bags"
       }
     },
     "collection_list_Hhb4p7": {
