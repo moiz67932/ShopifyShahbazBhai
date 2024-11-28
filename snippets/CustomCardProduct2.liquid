@@ -119,7 +119,7 @@
     endif
   -%}
   <div class="card-wrapper product-card-wrapper custom-product-card ">
-    <pre>{{ card_product.featured_media[1] | json }}</pre>
+    <pre>{{ card_product.featured_media.id | json }}</pre>
     <div
       class="
         card card--{{ settings.card_style }}
