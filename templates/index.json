@@ -95,35 +95,6 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "custom_slider_main_4h8JLp": {
-      "type": "CustomSliderMain",
-      "blocks": {
-        "product_Haz6yc": {
-          "type": "product",
-          "settings": {
-            "product_set": "dummy-jacket",
-            "image": "shopify://shop_images/image_2024-11-24_001146080-removebg-preview.png",
-            "product_title": "Premium Leather Jackets",
-            "show_price": true,
-            "product_description": "<h1>NEW SCHOOL Fit.<br/>OLD SCHOOL GRIT.</h1>",
-            "button_text": "Shop Now",
-            "background": "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,17,126,1) 19%, rgba(78,9,121,1) 47%, rgba(61,54,151,1) 93%, rgba(106,26,210,1) 100%);"
-          }
-        }
-      },
-      "block_order": [
-        "product_Haz6yc"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "h3 {font-size: 10px;}"
-      ],
-      "settings": {
-        "is_slider": false,
-        "keep_animation": false,
-        "font_size": 160
-      }
-    },
     "rich_text_CjbypF": {
       "type": "rich-text",
       "blocks": {
@@ -234,49 +205,7 @@
     "custom_product_card_QPTYac": {
       "type": "CustomProductCard",
       "blocks": {
-        "product_wUqhzd": {
-          "type": "product",
-          "settings": {
-            "product": "dummy-jacket-2"
-          }
-        },
-        "product_EnYcch": {
-          "type": "product",
-          "settings": {
-            "product": "dummy-jacket-3"
-          }
-        },
-        "product_3LEWVe": {
-          "type": "product",
-          "settings": {
-            "product": "dummy-jacket-4"
-          }
-        },
-        "product_byqmM9": {
-          "type": "product",
-          "settings": {
-            "product": "dummy-jacket-3"
-          }
-        },
-        "product_jzJack": {
-          "type": "product",
-          "settings": {
-            "product": "dummy-jacket-3"
-          }
-        },
-        "product_bqhfEq": {
-          "type": "product",
-          "settings": {
-            "product": "dummy-jacket-2"
-          }
-        },
-        "product_FmdAVV": {
-          "type": "product",
-          "settings": {
-            "product": "dummy-jacket-3"
-          }
-        },
-        "product_4h3J8H": {
+        "product_yMA8kW": {
           "type": "product",
           "settings": {
             "product": "dummy-jacket-2"
@@ -284,14 +213,7 @@
         }
       },
       "block_order": [
-        "product_wUqhzd",
-        "product_EnYcch",
-        "product_3LEWVe",
-        "product_byqmM9",
-        "product_jzJack",
-        "product_bqhfEq",
-        "product_FmdAVV",
-        "product_4h3J8H"
+        "product_yMA8kW"
       ],
       "custom_css": [],
       "settings": {
@@ -348,7 +270,7 @@
         "featured_collection_igrByy": {
           "type": "featured_collection",
           "settings": {
-            "collection": "men"
+            "collection": "best-sellers"
           }
         },
         "featured_collection_q3Vdkc": {
@@ -730,12 +652,51 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collection_list_UUwx4E": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_bytcDP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "featured_collection_4JkGcJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_RpN4WW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_bytcDP",
+        "featured_collection_4JkGcJ",
+        "featured_collection_RpN4WW"
+      ],
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "custom_banner_dGxhCY",
     "slideshow_NYqgwN",
-    "custom_slider_main_4h8JLp",
     "rich_text_CjbypF",
     "custom_collection_grid1_moiz_bRJWEz",
     "collage_cdnE3P",
@@ -749,6 +710,7 @@
     "featured_collection",
     "multicolumn_VwmNnj",
     "image_banner_rDfPdD",
-    "multicolumn_78PT3L"
+    "multicolumn_78PT3L",
+    "collection_list_UUwx4E"
   ]
 }
