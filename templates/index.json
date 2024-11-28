@@ -27,7 +27,7 @@
         "image_kMAPDF"
       ],
       "custom_css": [
-        ".button{border:none; border-radius:0px;}"
+        ".button {border: none; border-radius: 0px;}"
       ],
       "settings": {}
     },
@@ -73,6 +73,7 @@
         "slide_nqGYkR",
         "slide_GBqRAt"
       ],
+      "disabled": true,
       "custom_css": [
         ".banner__box {background-color: transparent;}",
         ".banner__buttons {border-radius: 20px;}",
@@ -159,6 +160,7 @@
         "button_axyQrn",
         "text_UpzJWY"
       ],
+      "disabled": true,
       "custom_css": [
         "p {color: black; font-size: 17px;}",
         "h2 {margin-top: px; font-size: 58px; font-weight: 500;}",
