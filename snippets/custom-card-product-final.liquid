@@ -84,7 +84,7 @@
           .quick-add{
             /* width:100%; */
             /* font-size:100px; */
-          /* max-width:100px; */
+          max-width:100px;
         }
 
         .card__content {
@@ -293,7 +293,7 @@
 
         {% comment %} Add to Cart Button {% endcomment %}
         {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
-        {% if quick_add == 'standard' %}
+        {% if quick_add %}
           <div class="quick-add no-js-hidden">
             {%- liquid
               assign qty_rules = false
