@@ -1792,6 +1792,15 @@
         "enable_sorting": {
           "label": "Enable sorting"
         },
+        "quick_add": {
+          "label": "Quick add",
+          "info": "Bulk is optimized for items purchased in higher quantities.",
+          "options": {
+            "option_1": "None",
+            "option_2": "Standard",
+            "option_3": "Bulk"
+          }
+        },
         "image_ratio": {
           "label": "Image ratio",
           "options__1": {
@@ -2250,15 +2259,6 @@
                 "option_2": "Square"
               }
             },
-            "quick_add": {
-          "label": "Quick add",
-          "info": "Bulk is optimized for items purchased in higher quantities.",
-          "options": {
-            "option_1": "None",
-            "option_2": "Standard",
-            "option_3": "Bulk"
-          }
-        },
             "enable_quick_add": {
               "label": "Enable quick add button"
             }
