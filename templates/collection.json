@@ -11,10 +11,11 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": "background-2"
+        "show_collection_image": true,
+        "color_scheme": "background-1"
       }
     },
     "image_banner_pV9qgF": {
@@ -52,13 +53,11 @@
         "text_WEgTp6",
         "buttons_BcGWwK"
       ],
-      "disabled": true,
       "custom_css": [
         "h1 {color: white; text-transform: uppercase;}",
         ".banner__box {background-color: transparent;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Cover_pic.jpg",
         "image_overlay_opacity": 20,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
