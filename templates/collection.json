@@ -58,6 +58,7 @@
         ".banner__box {background-color: transparent;}"
       ],
       "settings": {
+        "image": "{{ collection.image }}",
         "image_overlay_opacity": 20,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
