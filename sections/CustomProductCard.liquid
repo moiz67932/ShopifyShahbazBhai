@@ -9,7 +9,7 @@
           card_product: block.settings.product,
           show_secondary_image: true,
           show_price: true,
-          show_quick_add: standard
+          show_quick_add: false
         %}
       </div>
     {% endfor %}
@@ -90,6 +90,7 @@
       .carousel-cell {
         width: 25%; /* Each cell takes up 25% to fit 4 per row */
         margin-right:25px;
+        min-height:350px;
       }
 
        .productCard {
